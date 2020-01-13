@@ -51,9 +51,9 @@ html {
   }
 }
 
-@media (min-width: 1320px) {
+@media (min-width: 1340px) {
   .container {
-    max-width: 1260px;
+    max-width: 1320px;
   }
 }
 

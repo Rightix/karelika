@@ -34,7 +34,7 @@
 // * Basic / Content
 body
   color: #231d1f
-  font: 0.625em/1.5 "Bitter", sans-serif
+  font: 0.625em/1.5 "Lato", sans-serif
   overflow-x: hidden
   height: 100%
 html
@@ -47,11 +47,10 @@ html
   height: 100%
 
 h1, h2, h3, h4, h5, h6
-  font-family: Montserrat, sans-serif
-  color: #d6001f
+  font-family: "Bitter", serif
+  color: #000
 
 h1
-  font-family: Montserrat, sans-serif
   font-size: 90px
   //font-weight: 600
   //margin: 53px 0 20px
@@ -68,10 +67,9 @@ h2
   font-weight: 700
 
 h3
-  font-size: 30px
-  font-weight: 700
+  font-size: 34px
+  font-weight: 400
   line-height: 38px
-  //margin: 33px 0 23px
   margin: 1em 0 .4em
 
 h4
@@ -80,13 +78,13 @@ h4
   margin: .9em 0 .35em
 
 h5
-  font-size: 22px
-  font-weight: 700
-  line-height: 28px
+  font-size: 21px
+  font-weight: 400
+  line-height: 32px
   text-transform: uppercase
   letter-spacing: 0.04em
   //margin: 28px 0 17px
-  margin: .9em 0 .35em
+  margin: 1.7em 0 .8em
 
 h6
   font-size: 17px
@@ -141,10 +139,12 @@ a
     &.float-left
       margin-right: 30px
   p
-    margin-bottom: 10px
+    margin-bottom: 25px
     //font-family: Arial
-    font-size: 16px
-    line-height: 30px
+    font-size: 17px
+    line-height: 25px
+    &:last-of-type
+      margin-bottom: 0
   iframe
     max-width: 100% !important
     margin: 25px 0
@@ -472,7 +472,35 @@ a
   padding: 0 19px
   width: 100%
   font-weight: 400
-
+.input
+  &-line
+    width: 100%
+    input
+      width: 100%
+      padding: 9px 14px
+    textarea
+      padding: 9px 14px
+  &-row
+    display: flex
+    .input-line
+      margin-right: 30px
+      &:last-of-type
+        margin-right: 0
+  &-text
+    border-radius: 5px
+    background: #fff
+    border: none
+    font-size: 18px
+    line-height: 28px
+    height: 45px
+    &::placeholder
+      color: #8d8d8d
+  &-textarea
+    border-radius: 5px
+    background: #fff
+    border: none
+    font-size: 18px
+    line-height: 28px
 .form-row.required
   position: relative
   &:after
@@ -615,20 +643,23 @@ label
 .checkbox
   cursor: pointer
   color: #808080
-  line-height: 17px
-  font-size: 14px
+  line-height: 24px
+  font-size: 20px
   //margin: 9px 0
   display: flex
-  align-items: center
+  align-items: flex-start
   &.has-error
     .checkbox-custom
       border: 1px solid #c72b11
   &__label
     display: inline-block
     vertical-align: bottom
-    font-size: 12px
-    line-height: 20px
-    color: #231d1f
+    font-size: 18px
+    line-height: 24px
+    color: #000
+    a
+      color: #FFCF8D
+      text-decoration: none
   input[type=checkbox]
     //display: none !important
     visibility: hidden
@@ -636,16 +667,16 @@ label
     position: absolute
   .checkbox__custom
     position: relative
-    width: 16px
-    height: 16px
-    border: 1px solid #979797
-    margin-right: 11px
+    width: 30px
+    height: 30px
+    margin-right: 13px
     background: #ffffff
-    display: inline-block
+    display: inline-flex
+    border-radius: 5px
     flex-shrink: 0
     transition: .3s
+    top: 6px
     &:hover
-      border: 1px solid #231d1f
       transition: .3s
 //box-shadow: 0 0 5px #c35e00
 
@@ -655,16 +686,14 @@ label
   position: absolute
   top: 0px
   left: 0px
-  background: #231d1f
   bottom: 0
   right: 0
   margin: auto
-  border-radius: 2px
-  background: url(../svg/checked.svg) no-repeat
+  background: url(../svg/check.svg) no-repeat
   -webkit-background-size: cover
   background-size: cover
-  width: 9px
-  height: 8px
+  width: 17px
+  height: 14px
 
 .checkbox:checked + .checkbox__custom
   border: 1px solid #c76203
@@ -714,3 +743,1150 @@ label
 // ***** Template
 
 // *** Header
+.padding
+  padding-left: 50px
+  padding-right: 50px
+.header
+  display: flex
+  padding-top: 35px
+  align-items: flex-end
+  margin-bottom: 40px
+  &-logotype
+    display: flex
+    text-decoration: none
+    align-items: flex-end
+    margin-right: 80px
+    &__image
+      width: 143px
+      height: 106px
+      margin-right: 24px
+      img
+        max-width: 100%
+    &-text
+      position: relative
+      bottom: -1px
+      font-family: "Bitter", Serif
+      white-space: nowrap
+      &__name
+        font-size: 35px
+        line-height: 20px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        margin-bottom: 17px
+        color: #000
+        font-weight: 700
+      &__caption
+        font-size: 18px
+        line-height: 20px
+        color: #e0581e
+  &-contacts
+    text-align: right
+    padding-bottom: 10px
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    margin-right: 45px
+    white-space: nowrap
+
+    &__mail
+      font-size: 24px
+      line-height: 20px
+      color: #7AAD16
+      position: relative
+      margin-bottom: 15px
+      text-decoration: none
+      position: relative
+      padding-left: 26px
+      &:before
+        content: ''
+        width: 17px
+        height: 13px
+        position: absolute
+        left: 0
+        bottom: 1px
+        background: url("../svg/mail.svg") no-repeat
+    &__phone
+      font-size: 24px
+      line-height: 20px
+      color: #000
+      text-decoration: none
+      position: relative
+      padding-left: 24px
+      &:before
+        content: ''
+        width: 14px
+        height: 22px
+        position: absolute
+        left: 0
+        bottom: 1px
+        background: url("../svg/phone.svg") no-repeat
+  &-callback
+    margin-right: 75px
+    font-size: 20px
+    margin-bottom: 12px
+  &-langs
+    margin-bottom: 18px
+    display: flex
+    align-items: center
+    &__item
+      font-size: 14px
+      line-height: 20px
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      color: #5f8f00
+      width: 38px
+      height: 38px
+      margin-right: 14px
+      border: 1px solid #D9F2A9
+      border-radius: 20px
+      text-decoration: none
+      &:last-of-type
+        margin-right: 0
+      &.current
+        border: 1px solid #000
+  &-menu
+    display: flex
+    justify-content: center
+    &__item
+      font-size: 19px
+      letter-spacing: 0.05em
+      text-transform: uppercase
+      color: #000
+      position: relative
+      padding: 0 26px
+      font-weight: 600
+      text-decoration: none
+      &:before
+        content: ''
+        position: absolute
+        height: 45px
+        width: 2px
+        background: #EEEEEE
+        top: 0
+        bottom: 0
+        left: 0
+        margin: auto
+    &__home
+      text-decoration: none
+      padding-right: 25px
+      padding-left: 25px
+      display: inline-flex
+      align-items: center
+      svg
+        width: 19px
+        height: 16px
+  &-wrapper
+    margin-bottom: 30px
+
+.border-button
+  border: 2px solid #FFC683
+  border-radius: 10px
+  min-height: 50px
+  padding: 5px 25px 7px
+  font-size: 20px
+  line-height: 20px
+  text-align: center
+  color: #5f8f00
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  text-decoration: none
+.main-slider
+  height: 490px
+  position: relative
+  //&:before
+  //  content: ''
+  //  position: absolute
+  //  top: 0
+  //  bottom: 0
+  //  left: -200%
+  //  right: 50%
+  //  z-index: -1
+  //  background: #83AC4E
+  &-container
+    background: #83ac4e
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      background: url("../svg/slider_pattern.svg") repeat-x
+      height: 36px
+      z-index: 100
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      background: url("../svg/slider_pattern.svg") repeat-x
+      height: 36px
+      z-index: 100
+      transform: scale(1,-1)
+  &-info
+  &-item
+    height: 490px
+    display: flex
+  &-left
+    height: 100%
+    flex: 0 0 750px
+    background: url("../svg/greenbg.svg") no-repeat
+    background-size: contain
+    padding-left: 70px
+    padding-right: 210px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    z-index: 10
+    position: relative
+
+    &__title
+      font-size: 40px
+      font-weight: 700
+      line-height: 44px
+      color: #fff
+      margin-bottom: 18px
+      font-family: "Bitter", serif
+    &__desc
+      font-family: "Bitter", serif
+      font-size: 20px
+      line-height: 28px
+      color: #fff
+  &-image
+    flex: 0 0 820px
+    margin-left: -135px
+    background-size: cover
+  &-container
+    .padding
+      padding-right: 0
+  .owl-item
+    &.active
+      //z-index: 100
+      //position: relative
+      //&:before
+      //  content: ''
+      //  position: absolute
+      //  top: 0
+      //  bottom: 0
+      //  left: -200%
+      //  right: 50%
+      //  z-index: -1
+      //  background: #83AC4E
+  .owl-stage
+    &-outer
+      overflow: hidden
+  .owl-nav
+    button
+      width: 21px
+      height: 34px
+      background: url("../svg/orange_arrow.svg")
+      background-size: cover
+      position: absolute
+      top: 0
+      bottom: 0
+      margin: auto
+      border: none
+      cursor: pointer
+      font-size: 0
+      &:focus
+        outline: none
+  .owl-prev
+    left: 0
+  .owl-next
+    right: 50px
+    transform: scale(-1,1)
+.owl-stage
+  display: flex
+.main-about
+  display: flex
+  padding: 48px 0 70px
+  align-items: flex-start
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 91px
+    height: 165px
+    left: 58px
+    bottom: 0
+    background: url("../svg/man_orange.svg")
+  &__title
+    flex: 0 0 150px
+    margin-right: 74px
+    font-family: "Bitter", serif
+    font-size: 34px
+    line-height: 34px
+    text-align: right
+  &__desc
+    flex: 0 1 770px
+    margin-right: 35px
+    font-size: 19px
+    line-height: 28px
+    color: #5e5e5e
+.tour-examples
+  background: linear-gradient(180deg, #FFCF8D 0%, rgba(255, 255, 255, 0) 100%), #FFF5E0
+  position: relative
+  padding: 72px 0 80px
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: -200%
+    right: -200%
+    background: linear-gradient(180deg, #FFCF8D 0%, rgba(255, 255, 255, 0) 100%), #FFF5E0
+    z-index: -1
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    right: 82px
+    width: 110px
+    height: 150px
+    background: url("../svg/man_green.svg") no-repeat
+  &__title
+    font-size: 34px
+    line-height: 34px
+    text-align: center
+    color: #e0581e
+    margin: 0 0 28px
+    font-family: "Bitter", serif
+    font-weight: 400
+  &-row
+    display: flex
+  &-card
+    flex: 0 1 271px
+    margin-right: 43px
+    &:last-child
+      margin-right: 0
+    &__image
+      margin-bottom: 15px
+      display: block
+      text-decoration: none
+      border-bottom: 2px solid #5F8F00
+      img
+        max-width: 100%
+    &__title
+      display: block
+      font-size: 23px
+      line-height: 28px
+      margin-bottom: 14px
+      color: #000
+      text-decoration: none
+    &__desc
+      font-size: 18px
+      line-height: 23px
+      color: #e0581e
+    &.more
+      background: #FFD178
+      height: 220px
+      padding: 78px 110px 86px 50px
+      position: relative
+      text-decoration: none
+      &:after
+        content: ''
+        position: absolute
+        width: 16px
+        height: 24px
+        right: 64px
+        top: 0
+        bottom: 0
+        margin: auto
+        background: url("../svg/more_arrow.svg") no-repeat
+    &__more
+      font-size: 24px
+      line-height: 28px
+      text-align: center
+      color: #e0581e
+      width: 112px
+.main-reviews
+  padding: 140px 0 82px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 130px
+    height: 127px
+    background: url("../svg/man_orange_1.svg")
+    left: -20px
+    bottom: 0
+  &-wrapper
+    background: url("../../img/greenbg.png")
+    background-size: cover
+    position: relative
+
+.review
+  &-slider
+    position: relative
+    &-item
+      flex: 0 1 1070px
+      max-width: 1070px
+      margin: 0 auto
+    .owl-stage-outer
+      overflow: hidden
+    .owl-dots
+      display: none
+    .owl-nav
+      button
+        background: url("../svg/green_arrow.svg") no-repeat
+        width: 25px
+        height: 38px
+        position: absolute
+        top: 0
+        bottom: 0
+        margin: auto
+        border: none
+        font-size: 0
+        cursor: pointer
+        &:focus
+          outline: none
+    .owl-prev
+      left: 0
+    .owl-next
+      right: 0
+      transform: scale(-1,1)
+  &-block
+    position: relative
+    background: #fff
+    font-size: 20px
+    line-height: 28px
+    padding: 70px 105px 43px 93px
+    border-radius: 40px
+    &__comma
+      content: ''
+      background: url("../svg/comma.svg") no-repeat
+      width: 37px
+      height: 34px
+      position: absolute
+      top: 46px
+      left: 40px
+    &:after
+      content: ''
+      position: absolute
+      width: 37px
+      height: 34px
+      background: url("../svg/comma.svg") no-repeat
+      transform: scale(-1,-1)
+      bottom: 46px
+      right: 44px
+    &:before
+      content: ''
+      background: url("../svg/review_rec.svg") no-repeat
+      width: 50px
+      height: 85px
+      position: absolute
+      right: 60px
+      bottom: -73px
+  &-caption
+    font-size: 18px
+    line-height: 22px
+    text-align: right
+    padding-right: 132px
+    margin-top: 21px
+    color: #fff
+    &__name
+      font-weight: 700
+      display: block
+.feedback
+  position: relative
+  padding: 100px 0 106px
+  margin-bottom: 20px
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: -200%
+    right: -200%
+    z-index: -1
+    background: linear-gradient(180deg, #FFCF8D 0%, #EBAC56 100%), linear-gradient(180deg, #E09B3D 0%, #B66F50 100%)
+  &__title
+    font-family: "Bitter", serif
+    font-size: 34px
+    text-align: center
+    color: #fff
+    margin-bottom: 18px
+  &__caption
+    font-size: 20px
+    line-height: 28px
+    margin-bottom: 30px
+    text-align: center
+  &-form
+    max-width: 700px
+    margin: 0 auto
+    .input-line
+      margin-bottom: 25px
+  &__button
+    background: none
+    color: #000
+    border-color: #fff
+    margin: 0 auto
+    cursor: pointer
+  &-submit
+    text-align: center
+  .white_man
+    position: absolute
+    right: 100px
+    bottom: 12px
+    width: 84px
+    height: 183px
+    background: url("../svg/man_white.svg")
+.footer
+  padding: 84px 0 48px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: -200%
+    right: -200%
+    background: url("../svg/footer_pattern.svg") repeat-x
+    background-position: center
+    height: 36px
+  &-top
+    display: flex
+    margin-bottom: 40px
+    align-items: flex-start
+    justify-content: space-between
+  &-bottom
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__copyright
+    font-size: 23px
+    line-height: 21px
+    flex: 0 1 700px
+    margin-right: auto
+  &-social
+    display: flex
+    align-items: center
+    &__item
+      margin-right: 42px
+      transition: .4s
+      opacity: 1
+      &:hover
+        opacity: 0.80
+      &:last-of-type
+        margin-right: 0
+      &.in
+        svg
+          width: 25px
+          height: 25px
+      &.fb
+        svg
+          width: 12px
+          height: 22px
+      &.vk
+        svg
+          width: 27px
+          height: 15px
+  &__address
+    position: relative
+    font-size: 18px
+    line-height: 25px
+    color: #5e5e5e
+    padding-left: 30px
+    flex: 0 1 420px
+    margin-right: 60px
+    &:before
+      content: ''
+      width: 20px
+      height: 27px
+      position: absolute
+      left: 0
+      top: -4px
+      background: url("../svg/geotag.svg") no-repeat
+  &__mail
+    display: inline-flex
+    align-items: center
+    font-size: 18px
+    line-height: 25px
+    color: #e0581e
+    text-decoration: none
+    flex: 0 1 195px
+    margin-right: 60px
+    svg
+      fill: none
+      width: 22px
+      height: 16px
+      margin-right: 10px
+  &-phones
+    display: inline-flex
+    color: #5e5e5e
+    font-size: 18px
+    line-height: 25px
+    flex: 0 1 190px
+    margin-right: 95px
+    svg
+      width: 16px
+      height: 25px
+      margin-right: 10px
+      position: relative
+      top: -2px
+      fill: none
+    a
+      display: block
+      text-decoration: none
+      color: #5e5e5e
+  &-interso
+    text-align: right
+    flex: 0 1 190px
+    margin-left: auto
+    a
+      text-decoration: none
+      color: #5E5E5E
+    &__copyright
+      font-size: 14px
+      line-height: 19px
+      color: #5e5e5e
+      margin-bottom: 14px
+    &__logo
+      svg
+        width: 90px
+        height: 20px
+.breadcrumbs
+  margin: 0px auto 2px
+  &__item
+    position: relative
+    font-size: 13px
+    line-height: 28px
+    color: #8d8d8d
+    text-decoration: none
+    &:after
+      content: ' /'
+.page-title
+  padding: 62px 0
+  padding-right: 60px
+  position: relative
+  &-wrapper
+    &.light-orange
+      background: #E0581E
+  &--detail
+    display: flex
+    align-items: center
+    padding-right: 50px
+    h1
+      max-width: 840px
+      margin-right: 30px
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: -200%
+    right: -200%
+    height: 36px
+    background: url("../svg/slider_pattern.svg") repeat-x
+    background-position: center
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: -200%
+    right: -200%
+    height: 36px
+    background: url("../svg/slider_pattern.svg") repeat-x
+    background-position: center
+    transform: scale(1,-1)
+  h1
+    font-size: 45px
+    line-height: 50px
+    margin: 0
+    font-weight: 700
+    font-family: "Bitter", serif
+    color: #fff
+.col-10
+  margin: 0 auto
+.tours-icon
+  content: ''
+  position: absolute
+  width: 85px
+  height: 117px
+  background: url("../svg/man_tours.svg")
+  right: -60px
+  bottom: 0
+.tours-desc
+  padding: 20px 0 32px
+  &__text
+    font-size: 19px
+    line-height: 28px
+    color: #5e5e5e
+    margin-bottom: 32px
+.tags-row
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: -12px
+  &__caption
+    font-size: 14px
+    line-height: 28px
+    color: #8d8d8d
+    margin-right: 16px
+  &__item
+    font-size: 14px
+    line-height: 28px
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    color: #e0581e
+    border: 1px solid #c4c4c4
+    border-radius: 6px
+    text-decoration: none
+    margin-right: 12px
+    white-space: nowrap
+    padding: 2px 12px
+    margin-bottom: 12px
+    &:last-of-type
+      margin-right: 0
+.tours
+  &-list
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -28px
+    padding: 85px 0 69px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: -200%
+      right: -200%
+      height: 36px
+      background: url("../svg/slider_pattern.svg") repeat-x
+      background-position: center
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: -200%
+      right: -200%
+      height: 36px
+      background: url("../svg/slider_pattern.svg") repeat-x
+      background-position: center
+      transform: scale(1,-1)
+    &-wrapper
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        left: -200%
+        right: -200%
+        z-index: -1
+        background: linear-gradient(0deg, #FFF4E8, #FFF4E8), #F5F5F5
+  &-card
+    &-wrapper
+      padding: 0 28px
+      margin-bottom: 63px
+      flex: 0 1 33.333333%
+      max-width: 33.333%
+    &__image
+      height: 228px
+      overflow: hidden
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      border-bottom: 2px solid #E0581E
+      margin-bottom: 10px
+      img
+        max-width: 100%
+    &-info
+      display: flex
+      justify-content: space-between
+      font-size: 16px
+      line-height: 23px
+      color: #5e5e5e
+      margin-bottom: 14px
+    &-tags
+      display: flex
+      flex-wrap: wrap
+      margin-bottom: 4px
+      &__item
+        font-size: 14px
+        line-height: 28px
+        text-align: center
+        color: #e0581e
+        margin-right: 8px
+        margin-bottom: 6px
+        border: 1px solid #C4C4C4
+        border-radius: 6px
+        text-decoration: none
+        padding: 0 10px
+    &__name
+      font-size: 32px
+      line-height: 36px
+      color: #5f8f00
+      margin-bottom: 15px
+      font-weight: 700
+      text-decoration: none
+      display: block
+    &__desc
+      font-size: 18px
+      line-height: 23px
+      color: #5e5e5e
+  &-footer
+    padding: 55px 0 50px
+    font-size: 17px
+    line-height: 26px
+    color: #5e5e5e
+    column-count: 2
+    column-gap: 30px
+    p
+      margin-bottom: 12px
+      &:last-of-type
+        margin-bottom: 0
+.tour-detail-head
+  margin-left: auto
+  &-item
+    text-align: right
+    margin-bottom: 24px
+    &:last-of-type
+      margin-bottom: 0
+    span
+      display: block
+      &:first-of-type
+        font-size: 12px
+        line-height: 23px
+        letter-spacing: 0.1em
+        text-transform: uppercase
+        font-weight: 700
+      &:last-of-type
+        font-weight: 700
+        font-size: 21px
+        line-height: 23px
+        color: #fff
+.detail-desc
+  padding: 10px 0 40px
+  .tags-row
+    margin-bottom: 10px
+  &__text
+    font-size: 21px
+    line-height: 30px
+    color: #5e5e5e
+.owl-next,.owl-prev
+  &:focus
+    outline: none
+.detail
+  &-slider
+    margin: 0 -70px 60px
+    position: relative
+    .owl-dots
+      display: none
+    .owl-nav
+      button
+        width: 20px
+        height: 34px
+        background: url("../svg/white_arrow.svg")
+        position: absolute
+        top: 115px
+        border: none
+        font-size: 0
+        cursor: pointer
+      .owl-prev
+        left: 25px
+      .owl-next
+        right: 25px
+        transform: scale(-1,1)
+    .owl-stage-outer
+      overflow: hidden
+    &-item
+      &__link
+        height: 259px
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow: hidden
+        margin-bottom: 10px
+        position: relative
+        &:after
+          content: ''
+          position: absolute
+          width: 18px
+          height: 18px
+          bottom: 7px
+          right: 7px
+          background: url("../svg/zoom.svg")
+        img
+          max-width: 100%
+      &__caption
+        font-size: 14px
+        line-height: 19px
+        color: #8d8d8d
+  &-plan
+    p
+      color: #4f4f4f
+  &-price
+    display: flex
+    padding-bottom: 25px
+    margin: 75px 0 44px
+    &__title
+      flex: 0 1 300px
+      margin-right: 30px
+      font-size: 34px
+      line-height: 34px
+      font-weight: 700
+      font-family: "Bitter", serif
+    &-list
+      flex: 0 1 740px
+      &__item
+        font-size: 17px
+        line-height: 25px
+        color: #4f4f4f
+        margin-bottom: 12px
+        position: relative
+        padding-left: 32px
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          top: 5px
+          width: 21px
+          height: 21px
+          background: url("../svg/detail_price.svg") no-repeat
+.content-slider
+  margin-bottom: 46px
+  position: relative
+  .owl-stage-outer
+    overflow: hidden
+  .owl-dots
+    display: none
+  .owl-nav
+    button
+      width: 21px
+      height: 34px
+      background: url("../svg/orange_arrow.svg")
+      background-size: cover
+      position: absolute
+      top: 67px
+      border: none
+      cursor: pointer
+      font-size: 0
+      &:focus
+        outline: none
+  .owl-prev
+    left: -55px
+  .owl-next
+    right: -55px
+    transform: scale(-1,1)
+  &-item
+    &__link
+      height: 167px
+      display: flex
+      align-items: center
+      justify-content: center
+      overflow: hidden
+      position: relative
+      margin-bottom: 7px
+      &:after
+        content: ''
+        position: absolute
+        bottom: 7px
+        right: 7px
+        background: url("../svg/zoom.svg")
+        width: 18px
+        height: 18px
+      img
+        max-width: 100%
+    &__caption
+      font-size: 14px
+      line-height: 19px
+      color: #8d8d8d
+
+.float-slider
+  width: 520px
+  float: right
+  margin-left: 65px
+  position: relative
+  .owl-stage-outer
+    overflow: hidden
+  .owl-dots
+    display: none
+  .owl-nav
+    button
+      width: 20px
+      height: 34px
+      background: url("../svg/white_arrow.svg")
+      position: absolute
+      top: 160px
+      border: none
+      font-size: 0
+      cursor: pointer
+  .owl-prev
+    left: 20px
+  .owl-next
+    right: 20px
+    transform: scale(-1,1)
+  &-item
+    &__link
+      overflow: hidden
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      margin-bottom: 13px
+      &:after
+        content: ''
+        position: absolute
+        bottom: 7px
+        right: 7px
+        width: 18px
+        height: 18px
+        background: url("../svg/zoom.svg")
+      img
+        max-width: 100%
+    &__caption
+      font-size: 14px
+      line-height: 19px
+      color: #8d8d8d
+.zoom-image
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  position: relative
+  margin: 27px 0
+  margin-right: 22px
+  img
+    max-width: 100%
+  &:after
+    content: ''
+    position: absolute
+    bottom: 7px
+    right: 7px
+    background: url("../svg/zoom.svg")
+    width: 18px
+    height: 18px
+.detail-feedback
+  margin: 0 auto
+  padding: 65px 15px
+  position: relative
+  &:before
+    background: linear-gradient(180deg, #E09B3D 0%, #7AAD16 100%)
+  .feedback
+    &__title
+      max-width: 830px
+      line-height: 40px
+      margin: 0 auto 18px
+    &-submit button
+      border-color: #FFC683
+      color: #fff
+  &__man
+    background: url("../svg/detail_feedback.svg")
+    width: 151px
+    height: 135px
+    position: absolute
+    left: 60px
+    bottom: 0
+.over-tours
+  position: relative
+  &-wrapper
+    padding: 54px 0 100px
+    position: relative
+    margin-bottom: 32px
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: -200%
+      right: -200%
+      background: linear-gradient(0deg, #FFF4E8, #FFF4E8)
+      z-index: -1
+  &__title
+    font-size: 34px
+    line-height: 34px
+    text-align: center
+    font-family: "Bitter", serif
+    margin-bottom: 38px
+  &-item
+    max-width: 281px
+    &__image
+      max-width: 100%
+      height: 195px
+      display: flex
+      align-items: center
+      justify-content: center
+      overflow: hidden
+      margin-bottom: 17px
+      border-bottom: 2px solid #E0581E
+      img
+        max-width: 100%
+    &__name
+      font-size: 28px
+      font-weight: 700
+      line-height: 32px
+      color: #5f8f00
+      text-decoration: none
+  .tours-card-tags
+    margin-bottom: 7px
+  .owl-stage-outer
+    overflow: hidden
+  .owl-dots
+    display: none
+  .owl-nav
+    button
+      width: 20px
+      height: 34px
+      background: url("../svg/white_arrow.svg")
+      position: absolute
+      top: 85px
+      border: none
+      font-size: 0
+      cursor: pointer
+  .owl-prev
+    left: 20px
+  .owl-next
+    right: 20px
+    transform: scale(-1,1)
+.services
+  &-desc
+    font-size: 19px
+    line-height: 28px
+    color: #5e5e5e
+    padding: 20px 0 60px
+  &-icon
+    position: absolute
+    width: 141px
+    height: 139px
+    background: url(../svg/services_icon.svg)
+    right: -84px
+    bottom: 0
+  &-list
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -20px
+  &-card
+    display: block
+    text-decoration: none
+    &-wrapper
+      padding: 0 20px
+      flex: 0 1 33.333%
+      max-width: 33.333%
+      margin-bottom: 100px
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+      overflow: hidden
+      margin-bottom: 17px
+      img
+        max-width: 100%
+    &__title
+      padding-right: 80px
+      position: relative
+      font-weight: 700
+      font-size: 28px
+      line-height: 32px
+      color: #e0581e
+      &:after
+        content: ''
+        position: absolute
+        right: 23px
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 17px
+        height: 31px
+        background: url("../svg/services_arrow.svg") no-repeat

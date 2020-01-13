@@ -32,29 +32,41 @@
     <header>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 padding">
                 <div class="header-wrapper">
                     <div class="header">
                         <a href="" class="header-logotype">
-                            <div class="header-logotype__image"></div>
+                            <div class="header-logotype__image">
+                                <img src="img/logo.png" alt="">
+                            </div>
                             <div class="header-logotype-text">
                                 <div class="header-logotype-text__name">КАРЕЛИКА</div>
                                 <div class="header-logotype-text__caption">Международный туроператор</div>
                             </div>
                         </a>
                         <div class="header-contacts">
-                            <a href="" class="header-contacts__mail"></a>
-                            <a href="" class="header-contacts__phone"></a>
+                            <a href="mailto:info@karelika.ru" class="header-contacts__mail">
+                                info@karelika.ru
+                            </a>
+                            <a href="tel:+7 (8142) 57-10-89" class="header-contacts__phone">
+                                +7 (8142) 57-10-89
+                            </a>
                         </div>
-                        <a href="" class="header-callback border-button"></a>
+                        <a href="" class="header-callback border-button">
+                            Обратная связь
+                        </a>
                         <div class="header-langs">
-                            <a href="" class="header-langs__item">Рус</a>
+                            <a href="" class="header-langs__item current">Рус</a>
                             <a href="" class="header-langs__item">Fin</a>
                             <a href="" class="header-langs__item">Eng</a>
                         </div>
                     </div>
                     <nav class="header-menu">
-                        <a href="" class="header-menu__home"></a>
+                        <a href="" class="header-menu__home">
+                            <svg>
+                                <use xlink:href="plain/svg/sprite.svg#homepage"></use>
+                            </svg>
+                        </a>
                         <a href="" class="header-menu__item">Туры</a>
                         <a href="" class="header-menu__item">Услуги</a>
                         <a href="" class="header-menu__item">Участие в проектах</a>
@@ -75,221 +87,63 @@
     <div class="container">
         <div class="row">
             <div class="col-12 footer">
-                <div class="footer-disclaimer">
-                    <div class="footer-publishing">
-                        <div class="footer-publishing__small">
-                            издательство
-                        </div>
-                        <div class="footer-publishing__big">
-                            PERIODIKA
-                        </div>
+                <div class="footer-top">
+                    <div class="footer__copyright">© Международный туроператор «Карелика», 2019</div>
+                    <div class="footer-social">
+                        <a href="" class="footer-social__item in">
+                            <svg>
+                                <use xlink:href="plain/svg/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="footer-social__item fb">
+                            <svg>
+                                <use xlink:href="plain/svg/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="footer-social__item vk">
+                            <svg>
+                                <use xlink:href="plain/svg/sprite.svg#vkontakte"></use>
+                            </svg>
+                        </a>
                     </div>
-                    <p>Мнения авторов могут не совпадать с позицией издания. </p>
-                    <p>При использовании материалов сайта гиперссылка обязательна.</p>
                 </div>
-                <div class="footer-info">
-                    <div class="footer-info__address">
-                        <span>185035, Россия, Республика Карелия, г. Петрозаводск, ул. Г.&nbsp;Титова, д.3</span>
+                <div class="footer-bottom">
+                    <div class="footer__address">
                         <span>
-                            <a href="tel:(8142) 78-36-29">(8142) 78-36-29</a> |
-                            <a href="tel:(8142) 78-30-12">(8142) 78-30-12</a>
+                            185030&nbsp;Россия, Республика Карелия, г. Петрозаводск, Лососинская набережная, 7, офис&nbsp;1
                         </span>
                     </div>
-                    <div class="footer-info__mail">
-                        Напишите нам
-                        <a href="mailto:periodika@rkperiodika.ru">periodika@rkperiodika.ru</a>
-                    </div>
-                    <div class="footer-socials">
-                        <a href="" class="footer-socials__vk">
-                            <svg>
-                                <use xlink:href="/plain/svg/sprite.svg#social-vk"></use>
-                            </svg>
-                        </a>
-                        <a href="" class="footer-socials__fb">
-                            <svg>
-                                <use xlink:href="/plain/svg/sprite.svg#social-fb"></use>
-                            </svg>
-                        </a>
-                        <a href="" class="footer-socials__in">
-                            <svg>
-                                <use xlink:href="/plain/svg/sprite.svg#social-in"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-menu">
-                    <a href="" class="footer-menu__link">
-                        Об издательстве
-                    </a>
-                    <a href="" class="footer-menu__link">
-                        Документы
-                    </a>
-                    <a href="" class="footer-menu__link">
-                        Контактная информация
-                    </a>
-                    <a href="" class="footer-menu__link">
-                        Размещение рекламы
-                    </a>
-                </div>
-                <div class="footer-up"></div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 footer-bottom">
-                    <div class="periodika-copyright">
-                        Все права защищены © 2019 “Periodika”.
-                    </div>
-                    <div class="interso-copyright">
-                        <a href="">Разработка сайта ООО "Интэрсо".</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <a href="mailto:info@karelika.ru" class="footer__mail">
+                        <svg>
+                            <use xlink:href="plain/svg/sprite.svg#mail"></use>
+                        </svg>
+                        <span>info@karelika.ru</span>
 
+                    </a>
+                    <div class="footer-phones">
+                        <svg>
+                            <use xlink:href="plain/svg/sprite.svg#phone"></use>
+                        </svg>
+                        <div class="footer-phones-block">
+                            <a href="tel:+7(8142) 57-10-89">+7(8142) 57-10-89</a>
+                            <a href="tel:+7(8142) 57-16-71">+7(8142) 57-16-71</a>
+                        </div>
+                    </div>
+                    <div class="footer-interso">
+                        <div class="footer-interso__copyright">© <a href="http://interso.ru/">Создание и поддержка
+                            сайта</a> ООО «<a href="http://interso.ru/">Интэрсо</a>», 2019
+                        </div>
+                        <a href="http://interso.ru/" class="footer-interso__logo">
+                            <svg>
+                                <use xlink:href="plain/svg/sprite.svg#interso"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
-
-<div id="signIn" class="sign">
-    <div class="sign__title">Вход</div>
-    <div class="sign-account">
-        <div class="sign-account__caption">
-            У Вас нет аккаунта в ОмаМедиа?
-        </div>
-        <a href="" class="sign-account__reg openReg">
-            Зарегистрироваться
-        </a>
-    </div>
-    <form class="sign-form">
-        <div class="sign-row">
-            <div class="sign-row__caption">
-                <label for="login_email">Электронный адрес</label>
-            </div>
-            <div class="sign-input-wrapper">
-                <input placeholder="email@mailbox.com" id="login_email" type="text" class="sign-row__input">
-            </div>
-        </div>
-        <div class="sign-row">
-            <div class="sign-row__caption forgot">
-                <span>Пароль</span>
-                <a class="sign-row__forgot-link open_password" href="">Забыли пароль?</a>
-            </div>
-            <div class="sign-input-wrapper">
-                <input id="signinPass" type="password" class="sign-row__input password-input">
-                <span class="password-toggle"></span>
-            </div>
-        </div>
-        <div class="sign-row">
-            <label class="sign-row-check">
-                <input type="checkbox" class="sign__checkbox">
-                <span class="sign__checkbox--custom"></span>
-                <span class="sign__checkbox-caption">Запомнить меня</span>
-            </label>
-        </div>
-        <div class="sign-row">
-            <button class="gradient-button" type="submit">Войти</button>
-        </div>
-    </form>
-    <div class="quick-login">Быстрый вход</div>
-    <div class="social-login">
-        <a href="" class="social-login__fb">
-            <img src="img/fb.png" alt="">
-        </a>
-        <a href="" class="social-login__go">
-            <img src="img/gp.png" alt="">
-        </a>
-        <a href="" class="social-login__vk">
-            <img src="img/vk.png" alt="">
-        </a>
-    </div>
-</div>
-<div id="signUp" class="sign">
-    <div class="sign__title">Регистрация</div>
-    <div class="sign-account">
-        <div class="sign-account__caption">
-            У Вас уже есть аккаунт в ОмаМедиа?
-        </div>
-        <a href="" class="sign-account__reg openLogin">
-            Войти
-        </a>
-    </div>
-    <form class="sign-form">
-        <div class="sign-row">
-            <div class="sign-row__caption">
-                <label for="login_email">Электронный адрес</label>
-            </div>
-            <div class="sign-input-wrapper">
-                <input placeholder="email@mailbox.com" id="login_email" type="text" class="sign-row__input">
-            </div>
-        </div>
-        <div class="sign-row">
-            <div class="sign-row__caption forgot">
-                <span>Пароль</span>
-                <a class="sign-row__forgot-link open_password" href="">Забыли пароль?</a>
-            </div>
-            <div class="sign-input-wrapper">
-                <input id="signinPass" type="password" class="sign-row__input password-input">
-                <span class="password-toggle"></span>
-            </div>
-        </div>
-        <div class="sign-row">
-            <div class="sign-row__caption forgot">
-                <span>Повторите пароль</span>
-            </div>
-            <div class="sign-input-wrapper">
-                <input id="signupPass" type="password" class="sign-row__input password-input">
-                <span class="password-toggle"></span>
-            </div>
-        </div>
-        <div class="sign-row">
-            <label class="sign-row-check">
-                <input type="checkbox" class="sign__checkbox">
-                <span class="sign__checkbox--custom"></span>
-                <span class="sign__checkbox-caption">Запомнить меня</span>
-            </label>
-        </div>
-        <div class="sign-row">
-            <button class="gradient-button" type="submit">зарегистрироваться</button>
-        </div>
-    </form>
-    <div class="quick-login">Быстрый вход</div>
-    <div class="social-login">
-        <a href="" class="social-login__fb">
-            <img src="img/fb.png" alt="">
-        </a>
-        <a href="" class="social-login__go">
-            <img src="img/gp.png" alt="">
-        </a>
-        <a href="" class="social-login__vk">
-            <img src="img/vk.png" alt="">
-        </a>
-    </div>
-</div>
-<div id="forgotPassword" class="sign">
-    <div class="sign__title">Восстановление пароля</div>
-    <div class="forgot-caption">
-        Выберите, какую информацию использовать для изменения пароля:
-    </div>
-    <form class="sign-form">
-        <div class="sign-row">
-            <div class="sign-row__caption">
-                <label for="login_email">Логин или email:
-                </label>
-            </div>
-            <div class="sign-input-wrapper">
-                <input placeholder="email@mailbox.com" id="login_email" type="text" class="sign-row__input">
-            </div>
-        </div>
-        <div class="sign-row">
-            <button class="gradient-button" type="submit">выслать</button>
-        </div>
-        <a href="#" class="sign-account__reg openLogin">
-            Авторизация
-        </a>
-    </form>
-</div>
 
 <script src="plain/js/jquery-3.2.1.min.js"></script>
 <script src="plain/js/jquery.fancybox.min.js"></script>

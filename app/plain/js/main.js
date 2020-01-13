@@ -4,102 +4,46 @@ $(document).ready(function () {
 
     $('.main-slider').owlCarousel({
         // stagePadding: 100,
-        items: 3,
+        items: 1,
         dots: false,
         nav: false,
-        center: true,
-        margin: 0,
-        loop: true,
-        dragEndSpeed: 1500,
-        fluidSpeed: 1500,
-        smartSpeed: 1500,
-        navSpeed: 1500,
-        autoWidth: true,
+        margin: 200,
         responsive: {
-            0: {
-                items: 1,
-                autoWidth: false,
-                center: false,
-                smartSpeed: 800,
-                navSpeed: 800,
-                dragEndSpeed: 800,
-                fluidSpeed: 800,
-            },
+            0: {},
             992: {}
         }
     });
 
-    $('.news-slider').owlCarousel({
+    $('.review-slider').owlCarousel({
         items: 1,
-        dots: false,
-        nav: false,
-        margin: 0,
         responsive: {
             0: {
-                margin: 10,
-                stagePadding: 20,
-                items: 1
                 // autoWidth: true
             },
-            420: {
-                margin: 15,
-                stagePadding: 20,
-                autoWidth: true
-            },
-            768: {
-                margin: 15,
-                stagePadding: 0,
-                autoWidth: false
-            },
             1320: {
-                stagePadding: 7,
-                margin: 14,
-                autoWidth: false,
                 items: 1,
             }
         }
     });
 
-    $('.smi-slider').owlCarousel({
-        dots: false,
-        nav: false,
-        margin: 14,
-
-        autoplayHoverPause: true,
-        autoplayTimeout: 5000,
-        smartSpeed: 1500,
-        onDrag: preventSmiPopup,
-        onDragged: preventSmiPopup,
-        responsive: {
-            0: {
-                items: 1,
-                smartSpeed: 800,
-                center: false,
-                margin: 14,
-                autoplay: false,
-                autoWidth: true
-            },
-            992: {
-                items: 2,
-                autoplay: false,
-                center: false,
-                autoWidth: true,
-            },
-            1320: {
-                items: 4,
-                center: false,
-                autoplay: false,
-                autoWidth: true
-            }
-        }
+    $('.detail-slider').owlCarousel({
+        items: 3,
+        margin: 24,
     });
 
-    $('.book-detail-image').owlCarousel({
+    $('.content-slider').owlCarousel({
+        items: 4,
+        margin: 22,
+    });
+
+    $('.float-slider').owlCarousel({
         items: 1,
-        dots: false,
-        nav: true
     });
 
+    $('.over-tours').owlCarousel({
+        items: 4,
+        margin: 30
+    });
 
     new ClipboardJS('#copyUrl', {
         text: function () {
@@ -301,8 +245,6 @@ $(document).ready(function () {
     });
 
 
-
-
 //Моб. скрипты
     if ($(window).width() < 1320) {
         $('.products-row').owlCarousel({
@@ -359,7 +301,7 @@ $(document).ready(function () {
     // --- Tooltip
     $(function () {
         let $tooltipEl = $('.order__hint');
-        $tooltipEl.each(function() {
+        $tooltipEl.each(function () {
             let $tooltipHint = $(this).data('hint');
             console.log($tooltipHint);
             new Tooltip($(this), {

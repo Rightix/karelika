@@ -49,11 +49,11 @@ gulp.task('sass', function(){ // Создаем таск Sass
 gulp.task('svg', function () {
     return gulp.src('app/plain/svg/*.svg')
     // minify svg
-        .pipe(svgMin({
+       /* .pipe(svgMin({
             js2svg: {
                 pretty: true
             }
-        }))
+        }))*/
         // remove all fill and style declarations in out shapes
         .pipe(cheerio({
             run: function ($) {
