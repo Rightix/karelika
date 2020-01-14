@@ -135,22 +135,22 @@ a
       margin-top: 13px
       padding-left: 5px
     &.float-right
-      margin-left: 30px
+      margin-left: 60px
     &.float-left
-      margin-right: 30px
+      margin-right: 60px
   p
     margin-bottom: 25px
     //font-family: Arial
     font-size: 17px
     line-height: 25px
-    &:last-of-type
+    &:last-child
       margin-bottom: 0
   iframe
     max-width: 100% !important
     margin: 25px 0
   ul
     list-style-type: none
-    padding-left: 45px
+    padding-left: 50px
     margin: 30px 0 54px
     font-size: 16px
     line-height: 24px
@@ -179,7 +179,7 @@ a
         display: inline-block
         width: 6px
         height: 6px
-        background: #D6001F
+        background: #5F8F00
         border-radius: 50%
         position: absolute
         left: -18px
@@ -750,6 +750,7 @@ label
   display: flex
   padding-top: 35px
   align-items: flex-end
+  justify-content: space-between
   margin-bottom: 40px
   &-logotype
     display: flex
@@ -895,15 +896,6 @@ label
 .main-slider
   height: 490px
   position: relative
-  //&:before
-  //  content: ''
-  //  position: absolute
-  //  top: 0
-  //  bottom: 0
-  //  left: -200%
-  //  right: 50%
-  //  z-index: -1
-  //  background: #83AC4E
   &-container
     background: #83ac4e
     position: relative
@@ -1042,11 +1034,20 @@ label
   &:after
     content: ''
     position: absolute
-    bottom: 0
+    bottom: -1px
     right: 82px
     width: 110px
     height: 150px
     background: url("../svg/man_green.svg") no-repeat
+  &__figure
+    width: 49px
+    height: 52px
+    position: absolute
+    top: -22px
+    right: 0
+    left: 0
+    margin: auto
+    background: url("../svg/figure_1.svg")
   &__title
     font-size: 34px
     line-height: 34px
@@ -1402,11 +1403,11 @@ label
 .tours-icon
   content: ''
   position: absolute
-  width: 85px
-  height: 117px
+  width: 100px
+  height: 93px
   background: url("../svg/man_tours.svg")
   right: -60px
-  bottom: 0
+  bottom: 37px
 .tours-desc
   padding: 20px 0 32px
   &__text
@@ -1848,11 +1849,11 @@ label
     padding: 20px 0 60px
   &-icon
     position: absolute
-    width: 141px
-    height: 139px
+    width: 136px
+    height: 95px
     background: url(../svg/services_icon.svg)
     right: -84px
-    bottom: 0
+    bottom: 36px
   &-list
     display: flex
     flex-wrap: wrap
@@ -1890,3 +1891,202 @@ label
         width: 17px
         height: 31px
         background: url("../svg/services_arrow.svg") no-repeat
+  &-body
+    padding: 48px 0 57px
+    p
+      font-size: 19px
+      line-height: 28px
+      color: #5E5E5E
+      margin-bottom: 28px
+      &:last-of-type
+        margin-bottom: 0
+  &-detail
+    margin-bottom: 54px
+    .col-11
+      padding-right: 50px
+.projects
+  &-icon
+    background: url("../svg/man_projects.svg")
+    width: 90px
+    height: 95px
+    bottom: 36px
+    right: -79px
+    position: absolute
+  &-list
+    margin: 0 -15px 30px
+    display: flex
+    flex-wrap: wrap
+  &-card
+    border-bottom: 6px solid #9ACA3C
+    height: 100%
+    display: flex
+    flex-direction: column
+    text-decoration: none
+    &-wrapper
+      flex: 0 1 50%
+      max-width: 50%
+      padding: 0 15px
+      margin-bottom: 30px
+    &__image
+      height: 305px
+      background-size: cover
+      flex-shrink: 0
+    &-text
+      background: #486C00
+      padding: 13px 28px 25px
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      height: 100%
+    &__name
+      font-family: "Bitter", serif
+      font-size: 32px
+      line-height: 38px
+      color: #fff
+      margin-bottom: 8px
+    &__desc
+      color: #D9F2A9
+      font-size: 18px
+      line-height: 24px
+
+  &-desc
+    font-size: 19px
+    line-height: 28px
+    color: #5e5e5e
+    padding: 33px 0 57px
+.project-head
+  height: 490px
+  position: relative
+  &-container
+    background: #486C00
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      background: url("../svg/slider_pattern.svg") repeat-x
+      height: 36px
+      z-index: 100
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      background: url("../svg/slider_pattern.svg") repeat-x
+      height: 36px
+      z-index: 100
+      transform: scale(1,-1)
+  &-info
+  &-item
+    height: 490px
+    display: flex
+  &-left
+    height: 100%
+    flex: 0 0 750px
+    background: url("../svg/darkgreenbg.svg") no-repeat
+    background-size: contain
+    padding: 80px 210px 84px 75px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    z-index: 10
+    position: relative
+
+    &__title
+      font-size: 40px
+      font-weight: 700
+      line-height: 44px
+      color: #fff
+      margin-bottom: 18px
+      font-family: "Bitter", serif
+    &__desc
+      font-family: "Bitter", serif
+      font-size: 20px
+      line-height: 28px
+      color: #fff
+  &-image
+    flex: 0 1 700px
+    margin-left: -135px
+    background-size: cover
+  &-container
+    .padding
+    padding-right: 0
+.project-detail
+  padding: 12px 0 0
+  .detail-slider
+    margin: 0 0 40px
+  &-info
+    padding-left: 70px
+    padding-bottom: 40px
+  &-item
+    margin-bottom: 48px
+    display: flex
+    &:last-of-type
+      margin-bottom: 0
+    &__text
+      font-size: 17px
+      line-height: 28px
+      ul
+        margin: 0 0 20px
+        li
+          &:before
+            background: #000
+      p
+        margin-bottom: 20px
+    &__title
+      flex: 0 0 300px
+      margin-right: 30px
+      font-family: "Bitter", serif
+      font-size: 21px
+      line-height: 32px
+      text-transform: uppercase
+      letter-spacing: 0.04em
+.articles
+  &-icon
+    width: 82px
+    height: 95px
+    position: absolute
+    right: -75px
+    bottom: 36px
+    background: url("../svg/man_articles.svg")
+  &-desc
+    padding: 16px 0 57px
+    font-size: 19px
+    line-height: 28px
+    color: #5e5e5e
+  &-list
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -18px
+  &-card
+    max-width: 590px
+    &-wrapper
+      padding: 0 18px
+      margin-bottom: 64px
+      flex: 0 1 50%
+    &__image
+      height: 305px
+      display: flex
+      justify-content: center
+      align-items: center
+      overflow: hidden
+      margin-bottom: 18px
+      border-bottom: 3px solid #9ACA3C
+      text-decoration: none
+      img
+        max-width: 100%
+    &__title
+      display: block
+      font-size: 32px
+      line-height: 38px
+      margin-bottom: 14px
+      font-family: "Bitter", serif
+      text-decoration: none
+      color: #000
+    &__desc
+      font-size: 18px
+      line-height: 24px
+      color: #e0581e
