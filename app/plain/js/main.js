@@ -2,12 +2,58 @@
 $(document).ready(function () {
     svg4everybody();
 
+    /*mainSlider();
+
+    function mainSlider() {
+        let $prev = $('.lesson-body__prev');
+        let $next = $('.lesson-body__next');
+        let $card = $('.lesson-body-card-wrapper');
+        let $currentCard = $('.lesson-body-card-wrapper.active');
+        let $countEl = $('.lesson-body-counter__number .current');
+        let currentCount = 1;
+        let maxCount = $('.lesson-body-card-wrapper').length;
+        $next.on('click', (e) => {
+            e.preventDefault();
+            if ($currentCard.next().length === 0) {
+                return false;
+            }
+            $currentCard.removeClass('active');
+            $currentCard = $currentCard.next();
+            $currentCard.addClass('active');
+            toChangeCount('plus');
+        });
+
+        $prev.on('click', (e) => {
+            e.preventDefault();
+            if ($currentCard.prev().length === 0) {
+                return false;
+            }
+            $currentCard.removeClass('active');
+            $currentCard = $currentCard.prev();
+            $currentCard.addClass('active');
+            toChangeCount('minus');
+        });
+        function toChangeCount(action) {
+            if (action === 'minus') {
+                if (currentCount === 1) return false;
+                currentCount = currentCount - 1;
+            }
+            if (action === 'plus') {
+                if (currentCount === maxCount) return false;
+                currentCount = currentCount + 1;
+            }
+            $countEl.html(currentCount)
+        }
+    }*/
+
     $('.main-slider').owlCarousel({
         // stagePadding: 100,
         items: 1,
         dots: false,
-        nav: false,
-        margin: 200,
+        mouseDrag: false,
+        margin: 1000,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
         responsive: {
             0: {},
             992: {}

@@ -73,7 +73,7 @@ h2
   font-weight: 700
 
 h3
-  font-size: 34px
+  font-size: 32px
   font-weight: 400
   line-height: 38px
   margin: 1.5em 0 .48em
@@ -123,6 +123,7 @@ a
 .content
   a
     color: #E0581E
+    text-decoration: none
     &:visited
       color: #A37F5E
   img
@@ -315,7 +316,6 @@ a
         line-height: 28px
         font-weight: 400
         color: #D06400
-        background: none
         padding: 14px 25px
         letter-spacing: 0.06em
         text-transform: uppercase
@@ -660,7 +660,7 @@ label
     line-height: 24px
     color: #000
     a
-      color: #FFCF8D
+      color: #fff
       text-decoration: none
   input[type=checkbox]
     //display: none !important
@@ -848,6 +848,7 @@ label
         margin-right: 0
       &.current
         border: 1px solid #000
+        color: #000
   &-menu
     display: flex
     justify-content: center
@@ -950,13 +951,14 @@ label
       line-height: 28px
       color: #fff
   &-image
-    flex: 0 0 820px
+    flex: 0 1 820px
     margin-left: -135px
     background-size: cover
   &-container
     .padding
       padding-right: 0
   .owl-item
+    transition: .4s
     &.active
       //z-index: 100
       //position: relative
@@ -1069,14 +1071,15 @@ label
       margin-bottom: 15px
       display: block
       text-decoration: none
-      border-bottom: 2px solid #5F8F00
       img
         max-width: 100%
+        border-bottom: 2px solid #DC3D1A
     &__title
       display: block
       font-size: 23px
       line-height: 28px
       margin-bottom: 14px
+      font-weight: 700
       color: #000
       text-decoration: none
     &__desc
@@ -1089,6 +1092,10 @@ label
       padding: 78px 110px 86px 50px
       position: relative
       text-decoration: none
+      border-bottom: solid 2px #E0581E
+      transition: .2s
+      &:hover
+        opacity: 0.8
       &:after
         content: ''
         position: absolute
@@ -1115,7 +1122,7 @@ label
     height: 127px
     background: url("../svg/man_orange_1.svg")
     left: -20px
-    bottom: 0
+    bottom: 3px
   &-wrapper
     background: url("../../img/greenbg.png")
     background-size: cover
@@ -1124,6 +1131,8 @@ label
 .review
   &-slider
     position: relative
+    .owl-stage
+      align-items: center
     &-item
       flex: 0 1 1070px
       max-width: 1070px
@@ -1183,6 +1192,7 @@ label
       position: absolute
       right: 60px
       bottom: -73px
+      //top: 100%
   &-caption
     font-size: 18px
     line-height: 22px
@@ -1192,6 +1202,8 @@ label
     color: #fff
     &__name
       font-weight: 700
+      display: block
+    .date
       display: block
 .feedback
   position: relative
@@ -1233,7 +1245,7 @@ label
   .white_man
     position: absolute
     right: 100px
-    bottom: 12px
+    bottom: 0px
     width: 84px
     height: 183px
     background: url("../svg/man_white.svg")
@@ -1447,7 +1459,7 @@ label
     display: flex
     flex-wrap: wrap
     margin: 0 -28px
-    padding: 85px 0 69px
+    padding: 85px 0 85px
     position: relative
     &:before
       content: ''
@@ -1501,6 +1513,7 @@ label
       font-size: 16px
       line-height: 23px
       color: #5e5e5e
+      font-weight: 700
       margin-bottom: 14px
     &-tags
       display: flex
@@ -1560,14 +1573,21 @@ label
         font-size: 21px
         line-height: 23px
         color: #fff
+.detail__text
+  color: #000
+  p
+    color: #000
 .detail-desc
   padding: 10px 0 40px
+  color: #000
   .tags-row
     margin-bottom: 10px
   &__text
     font-size: 21px
     line-height: 30px
     color: #5e5e5e
+  p
+    color: #000
 .owl-next,.owl-prev
   &:focus
     outline: none
@@ -1803,6 +1823,7 @@ label
     text-align: center
     font-family: "Bitter", serif
     margin-bottom: 38px
+    color: #8D8D8D
   &-item
     max-width: 281px
     &__image
@@ -1855,7 +1876,7 @@ label
     height: 95px
     background: url(../svg/services_icon.svg)
     right: -84px
-    bottom: 36px
+    bottom: 37px
   &-list
     display: flex
     flex-wrap: wrap
@@ -1863,6 +1884,8 @@ label
   &-card
     display: block
     text-decoration: none
+    &:hover .services-card__image img
+      transform: scale(1.05)
     &-wrapper
       padding: 0 20px
       flex: 0 1 33.333%
@@ -1876,6 +1899,7 @@ label
       margin-bottom: 17px
       img
         max-width: 100%
+        transition: 8s
     &__title
       padding-right: 80px
       position: relative
@@ -1911,7 +1935,7 @@ label
     background: url("../svg/man_projects.svg")
     width: 90px
     height: 95px
-    bottom: 36px
+    bottom: 37px
     right: -79px
     position: absolute
   &-list
@@ -1924,6 +1948,10 @@ label
     display: flex
     flex-direction: column
     text-decoration: none
+    transition: .4s
+    opacity: 1
+    &:hover
+      opacity: 0.92
     &-wrapper
       flex: 0 1 50%
       max-width: 50%
@@ -2023,6 +2051,9 @@ label
   &-info
     padding-left: 70px
     padding-bottom: 40px
+    color: #000
+    p, ul
+      color: #000
   &-item
     margin-bottom: 48px
     display: flex
@@ -2052,7 +2083,7 @@ label
     height: 95px
     position: absolute
     right: -75px
-    bottom: 36px
+    bottom: 37px
     background: url("../svg/man_articles.svg")
   &-desc
     padding: 16px 0 57px
@@ -2065,6 +2096,8 @@ label
     margin: 0 -18px
   &-card
     max-width: 590px
+    &:hover .articles-card__image img
+      transform: scale(1.05)
     &-wrapper
       padding: 0 18px
       margin-bottom: 64px
@@ -2076,10 +2109,12 @@ label
       align-items: center
       overflow: hidden
       margin-bottom: 18px
-      border-bottom: 3px solid #9ACA3C
       text-decoration: none
+      border-bottom: 3px solid #DC3D1A
       img
         max-width: 100%
+        transition: 10s
+
     &__title
       display: block
       font-size: 32px
@@ -2156,7 +2191,7 @@ label
   &-icon
     width: 122px
     height: 95px
-    bottom: 36px
+    bottom: 37px
     position: absolute
     right: -85px
     background: url("../svg/man_company.svg")
@@ -2213,6 +2248,7 @@ label
     width: 84px
     height: 183px
     left: 0
+    bottom: -1px
 .requisites
   display: flex
   padding: 66px 0 40px
@@ -2320,7 +2356,6 @@ label
     display: flex
   &-item
     flex: 0 1 243px
-    padding-top: 40px
     font-size: 18px
     line-height: 24px
     margin-right: 30px
@@ -2400,3 +2435,24 @@ label
           font-size: 16px
         &__copyright
           font-size: 18px
+.list-more
+  font-size: 24px
+  line-height: 28px
+  color: #E0581E
+  flex: 0 0 100%
+  text-align: center
+  justify-content: center
+  display: flex
+  align-items: center
+  position: relative
+  text-decoration: none
+  margin-top: -6px
+  &:after
+    content: ''
+    width: 21px
+    height: 13px
+    background: url("../svg/arrow_down.svg") no-repeat
+    position: relative
+    display: inline-block
+    margin-left: 24px
+    top: 2px
