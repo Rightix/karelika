@@ -59,9 +59,11 @@
                             <a href="" class="header-langs__item">Fin</a>
                             <a href="" class="header-langs__item">Eng</a>
                         </div>
+                        <div class="burger-button"></div>
                     </div>
                     <nav class="header-menu">
                         <a href="" class="header-menu__home">
+                            Главная
                             <svg>
                                 <use xlink:href="plain/svg/sprite.svg#homepage"></use>
                             </svg>
@@ -80,7 +82,7 @@
 </header>
     <div class="container">
         <div class="row">
-            <div class="col-10">
+            <div class="col-lg-10">
                 <div class="breadcrumbs">
                     <a href="" class="breadcrumbs__item">Главная</a>
                     <a href="" class="breadcrumbs__item">Информация</a>
@@ -92,7 +94,7 @@
     <div class="page-title-wrapper light-orange article-head">
         <div class="container">
             <div class="row">
-                <div class="col-10">
+                <div class="col-lg-10">
                     <div class="page-title light-orange">
                         <h1>Репа синяя, а каша — желтая</h1>
                         <div class="article-author">
@@ -103,14 +105,13 @@
             </div>
         </div>
     </div>
-    <div class="article-image">
-        <img src="temp/static_1.png" alt="">
+    <div class="article-image" style="background-image:url(temp/static_1.png);">
     </div>
     <div class="container article-wrapper">
         <div class="row">
-            <div class="col-10">
+            <div class="col-lg-10">
                 <div class="article-body content">
-                    <p style="font-size: 26px;line-height: 35px;margin-bottom: 48px;">В книге «Карельская кухня» сказано: «Карелы очень много употребляли в пищу репы (синей),
+                    <p style="font-size: 26px;line-height: 35px;margin-bottom: 48px;color: #000">В книге «Карельская кухня» сказано: «Карелы очень много употребляли в пищу репы (синей),
                         выращивая ее в больших количествах на подсеках вплоть до тридцатых годов XX века».</p>
                     <p>Незаслуженно забытая сейчас <a href="#">репа (link)</a> в прошлом занимала в питании <a
                             href="#a">карел (alink)</a>, да и многих
@@ -276,7 +277,7 @@
                 </div>
             </div>
             <div class="col-12 padding">
-                <div class="other-articles">
+                <div class="other-articles static-other-articles">
                     <div class="other-articles__title">Другие статьи</div>
                     <div class="articles-list">
                         <div class="articles-card-wrapper">
@@ -311,6 +312,7 @@
                             </div>
                         </div>
                     </div>
+                    <a href="" class="list-more">Показать еще</a>
                 </div>
             </div>
 
@@ -322,58 +324,115 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-12 footer">
-                <div class="footer-top">
-                    <div class="footer__copyright">© Международный туроператор «Карелика», 2019</div>
-                    <div class="footer-social">
-                        <a href="" class="footer-social__item in">
-                            <svg>
-                                <use xlink:href="plain/svg/sprite.svg#instagram"></use>
-                            </svg>
-                        </a>
-                        <a href="" class="footer-social__item fb">
-                            <svg>
-                                <use xlink:href="plain/svg/sprite.svg#facebook"></use>
-                            </svg>
-                        </a>
-                        <a href="" class="footer-social__item vk">
-                            <svg>
-                                <use xlink:href="plain/svg/sprite.svg#vkontakte"></use>
-                            </svg>
-                        </a>
+            <div class="col-12 padding">
+                <div class="footer">
+                    <div class="footer-top">
+                        <div class="footer__copyright">© Международный туроператор «Карелика», 2019</div>
+                        <div class="footer-social">
+                            <a href="" class="footer-social__item in">
+                                <svg>
+                                    <use xlink:href="plain/svg/sprite.svg#instagram"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="footer-social__item fb">
+                                <svg>
+                                    <use xlink:href="plain/svg/sprite.svg#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="footer-social__item vk">
+                                <svg>
+                                    <use xlink:href="plain/svg/sprite.svg#vkontakte"></use>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="footer__address">
+                    <div class="footer-bottom">
+                        <div class="footer__address">
                         <span>
                             185030&nbsp;Россия, Республика Карелия, г. Петрозаводск, Лососинская набережная, 7, офис&nbsp;1
                         </span>
-                    </div>
-                    <a href="mailto:info@karelika.ru" class="footer__mail">
-                        <svg>
-                            <use xlink:href="plain/svg/sprite.svg#mail"></use>
-                        </svg>
-                        <span>info@karelika.ru</span>
-
-                    </a>
-                    <div class="footer-phones">
-                        <svg>
-                            <use xlink:href="plain/svg/sprite.svg#phone"></use>
-                        </svg>
-                        <div class="footer-phones-block">
-                            <a href="tel:+7(8142) 57-10-89">+7(8142) 57-10-89</a>
-                            <a href="tel:+7(8142) 57-16-71">+7(8142) 57-16-71</a>
                         </div>
-                    </div>
-                    <div class="footer-interso">
-                        <div class="footer-interso__copyright">© <a href="http://interso.ru/">Создание и поддержка
-                            сайта</a> ООО «<a href="http://interso.ru/">Интэрсо</a>», 2019
-                        </div>
-                        <a href="http://interso.ru/" class="footer-interso__logo">
+                        <a href="mailto:info@karelika.ru" class="footer__mail">
                             <svg>
-                                <use xlink:href="plain/svg/sprite.svg#interso"></use>
+                                <use xlink:href="plain/svg/sprite.svg#mail"></use>
                             </svg>
+                            <span>info@karelika.ru</span>
+
                         </a>
+                        <div class="footer-phones">
+                            <svg>
+                                <use xlink:href="plain/svg/sprite.svg#phone"></use>
+                            </svg>
+                            <div class="footer-phones-block">
+                                <a href="tel:+7(8142) 57-10-89">+7(8142) 57-10-89</a>
+                                <a href="tel:+7(8142) 57-16-71">+7(8142) 57-16-71</a>
+                            </div>
+                        </div>
+                        <div class="footer-interso">
+                            <div class="footer-interso__copyright">© <a href="http://interso.ru/">Создание и поддержка
+                                сайта</a> ООО «<a href="http://interso.ru/">Интэрсо</a>», 2019
+                            </div>
+                            <a href="http://interso.ru/" class="footer-interso__logo">
+                                <svg>
+                                    <use xlink:href="plain/svg/sprite.svg#interso"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer mobile">
+                    <div class="footer-top">
+                        <div class="footer__copyright">© Международный туроператор «Карелика», 2019</div>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="footer__address">
+                        <span>
+                            185030&nbsp;Россия, Республика Карелия, г. Петрозаводск, Лососинская набережная, 7, офис&nbsp;1
+                        </span>
+                        </div>
+                        <a href="mailto:info@karelika.ru" class="footer__mail">
+                            <svg>
+                                <use xlink:href="plain/svg/sprite.svg#mail"></use>
+                            </svg>
+                            <span>info@karelika.ru</span>
+
+                        </a>
+                        <div class="footer-phones">
+                            <svg>
+                                <use xlink:href="plain/svg/sprite.svg#phone"></use>
+                            </svg>
+                            <div class="footer-phones-block">
+                                <a href="tel:+7(8142) 57-10-89">+7(8142) 57-10-89</a>
+                                <a href="tel:+7(8142) 57-16-71">+7(8142) 57-16-71</a>
+                            </div>
+                        </div>
+                        <div class="footer-social">
+                            <a href="" class="footer-social__item in">
+                                <svg>
+                                    <use xlink:href="plain/svg/sprite.svg#instagram"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="footer-social__item fb">
+                                <svg>
+                                    <use xlink:href="plain/svg/sprite.svg#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="" class="footer-social__item vk">
+                                <svg>
+                                    <use xlink:href="plain/svg/sprite.svg#vkontakte"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="footer-interso">
+                            <div class="footer-interso__copyright">© <a href="http://interso.ru/">Создание и поддержка
+                                сайта</a> ООО «<a href="http://interso.ru/">Интэрсо</a>», 2019
+                            </div>
+                            <a href="http://interso.ru/" class="footer-interso__logo">
+                                <svg>
+                                    <use xlink:href="plain/svg/sprite.svg#interso"></use>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

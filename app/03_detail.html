@@ -40,7 +40,7 @@
     <div class="detail-wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-10 detail-desc">
+                <div class="col-lg-10 detail-desc">
                     <div class="tags-row">
                         <a href="" class="tags-row__item">Туры в Финляндию и Скандинавию</a>
                         <a href="" class="tags-row__item">Детские и молодежные лагеря</a>
@@ -52,7 +52,7 @@
                         идущем под полными парусами.
                     </div>
                 </div>
-                <div class="col-10 detail content">
+                <div class="col-lg-10 detail content">
                     <div class="detail-slider">
                         <div class="detail-slider-item">
                             <a data-fancybox href="temp/9.png" class="detail-slider-item__link">
@@ -273,15 +273,17 @@
                         <p>23:00 — Выход в Онежское озеро. Ночной переход по Онежскому озеру от поселка Повенец до
                             острова
                             Кижи (ориентировочное время в пути 13 часов, 63 мили).</p>
-                        <a style="width: 250px" data-fancybox="" href="temp/9.png" class="zoom-image">
-                            <img src="temp/9.png" alt="">
-                        </a>
-                        <a style="width: 250px" data-fancybox="" href="temp/10.png" class="zoom-image">
-                            <img src="temp/10.png" alt="">
-                        </a>
-                        <a style="width: 250px" data-fancybox="" href="temp/11.png" class="zoom-image">
-                            <img src="temp/11.png" alt="">
-                        </a>
+                        <div class="content-images">
+                            <a style="width: 250px" data-fancybox="" href="temp/9.png" class="zoom-image">
+                                <img src="temp/9.png" alt="">
+                            </a>
+                            <a style="width: 250px" data-fancybox="" href="temp/10.png" class="zoom-image">
+                                <img src="temp/10.png" alt="">
+                            </a>
+                            <a style="width: 250px" data-fancybox="" href="temp/11.png" class="zoom-image">
+                                <img src="temp/11.png" alt="">
+                            </a>
+                        </div>
                     </div>
                     <div class="detail-price">
                         <div class="detail-price__title">В стоимость входит</div>
@@ -298,55 +300,59 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-10 feedback detail-feedback">
-                    <div class="feedback__title">Оставить предварительную заявку
-                        на&nbsp;подобный тур
-                    </div>
-                    <div class="feedback__caption">
-                        Наш менеджер свяжется с вами в рабочее время для уточнения подробностей.
-                    </div>
-                    <div class="feedback-form">
-                        <div class="input-row">
-                            <div class="input-line">
-                                <input placeholder="Как вас зовут?" type="text" class="input-text">
-                            </div>
-                            <div class="input-line">
-                                <input placeholder="Адрес эл. почты" type="text" class="input-text">
-                            </div>
+                <div class="col-lg-10">
+                    <div class=" feedback detail-feedback">
+                        <div class="feedback__title">Оставить предварительную заявку
+                            на&nbsp;подобный тур
                         </div>
-                        <div class="input-row">
-                            <div class="input-line">
-                                <input placeholder="Предполагаемые даты заезда?" type="text" class="input-text">
-                            </div>
-                            <div class="input-line">
-                                <input placeholder="Количество человек в группе" type="text" class="input-text">
-                            </div>
+                        <div class="feedback__caption">
+                            Наш менеджер свяжется с вами в рабочее время для уточнения подробностей.
                         </div>
-                        <div class="input-line">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <div class="checkbox__custom"></div>
-                                <div class="checkbox__label">
-                                    Отправляя форму выражаю свое согласие на обработку персональных данных. <a href="">Политика
-                                    персональных данных</a>
+                        <div class="feedback-form">
+                            <div class="input-row">
+                                <div class="input-line">
+                                    <input placeholder="Как вас зовут?" type="text" class="input-text">
                                 </div>
-                            </label>
+                                <div class="input-line">
+                                    <input placeholder="Адрес эл. почты" type="text" class="input-text">
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-line">
+                                    <input placeholder="Предполагаемые даты заезда?" type="text" class="input-text">
+                                </div>
+                                <div class="input-line">
+                                    <input placeholder="Количество человек в группе" type="text" class="input-text">
+                                </div>
+                            </div>
+                            <div class="input-line">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <div class="checkbox__custom"></div>
+                                    <div class="checkbox__label">
+                                        Отправляя форму выражаю свое согласие на обработку персональных данных. <a href="">Политика
+                                        персональных данных</a>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="feedback-submit">
+                                <button class="feedback__button border-button" type="submit">Отправить</button>
+                            </div>
                         </div>
-                        <div class="feedback-submit">
-                            <button class="feedback__button border-button" type="submit">Отправить</button>
-                        </div>
+                        <div class="detail-feedback__man"></div>
                     </div>
-                    <div class="detail-feedback__man"></div>
+
                 </div>
                 <div class="col-12 padding">
                     <div class="over-tours-wrapper">
                         <div class="over-tours__title">
                             Другие туры
                         </div>
+                        <!--Тоже картинки загружать размером больше чем в декстопе. В адаптиве они всегда в максимально возможном размере-->
                         <div class="over-tours">
                             <div class="over-tours-item">
                                 <a href="" class="over-tours-item__image">
-                                    <img src="temp/over1.png" alt="">
+                                    <img src="temp/2.png" alt="">
                                 </a>
                                 <div class="tours-card-tags">
                                     <a href="" class="tours-card-tags__item">Туры в Финляндию и Скандинавию</a>
@@ -356,7 +362,7 @@
                             </div>
                             <div class="over-tours-item">
                                 <a href="" class="over-tours-item__image">
-                                    <img src="temp/over2.png" alt="">
+                                    <img src="temp/3.png" alt="">
                                 </a>
                                 <div class="tours-card-tags">
                                     <a href="" class="tours-card-tags__item">Туры в Финляндию и Скандинавию</a>
@@ -367,7 +373,7 @@
                             </div>
                             <div class="over-tours-item">
                                 <a href="" class="over-tours-item__image">
-                                    <img src="temp/over3.png" alt="">
+                                    <img src="temp/4.png" alt="">
                                 </a>
                                 <div class="tours-card-tags">
                                     <a href="" class="tours-card-tags__item">Туры в Финляндию и Скандинавию</a>
@@ -378,7 +384,7 @@
                             </div>
                             <div class="over-tours-item">
                                 <a href="" class="over-tours-item__image">
-                                    <img src="temp/over4.png" alt="">
+                                    <img src="temp/2.png" alt="">
                                 </a>
                                 <div class="tours-card-tags">
                                     <a href="" class="tours-card-tags__item">Туры в Финляндию и Скандинавию</a>
@@ -388,7 +394,7 @@
                             </div>
                             <div class="over-tours-item">
                                 <a href="" class="over-tours-item__image">
-                                    <img src="temp/over1.png" alt="">
+                                    <img src="temp/3.png" alt="">
                                 </a>
                                 <div class="tours-card-tags">
                                     <a href="" class="tours-card-tags__item">Туры в Финляндию и Скандинавию</a>
@@ -398,7 +404,7 @@
                             </div>
                             <div class="over-tours-item">
                                 <a href="" class="over-tours-item__image">
-                                    <img src="temp/over2.png" alt="">
+                                    <img src="temp/4.png" alt="">
                                 </a>
                                 <div class="tours-card-tags">
                                     <a href="" class="tours-card-tags__item">Туры в Финляндию и Скандинавию</a>
@@ -409,7 +415,7 @@
                             </div>
                             <div class="over-tours-item">
                                 <a href="" class="over-tours-item__image">
-                                    <img src="temp/over3.png" alt="">
+                                    <img src="temp/2.png" alt="">
                                 </a>
                                 <div class="tours-card-tags">
                                     <a href="" class="tours-card-tags__item">Туры в Финляндию и Скандинавию</a>
@@ -420,7 +426,7 @@
                             </div>
                             <div class="over-tours-item">
                                 <a href="" class="over-tours-item__image">
-                                    <img src="temp/over4.png" alt="">
+                                    <img src="temp/3.png" alt="">
                                 </a>
                                 <div class="tours-card-tags">
                                     <a href="" class="tours-card-tags__item">Туры в Финляндию и Скандинавию</a>

@@ -1,0 +1,847 @@
+@media (max-width: 1120px)
+  .header
+    flex-wrap: wrap
+    align-items: flex-start
+    padding-top: 27px
+    margin-bottom: 27px
+    &-wrapper
+      position: relative
+    &-logotype
+      align-items: flex-start
+      margin: 0 0 26px
+      flex: 0 0 100%
+      max-width: 100%
+      &__image
+        width: 97px
+        height: 72px
+        margin-right: 11px
+      &-text
+        white-space: normal
+        &__name
+          font-size: 32px
+          margin-bottom: 10px
+          padding-top: 6px
+        &__caption
+          font-size: 16px
+          max-width: 140px
+    &-contacts
+      align-items: flex-start
+      flex: 0 1 auto
+      margin-right: 10px
+      padding: 5px 0 0
+      &__mail
+        font-size: 20px
+        margin-bottom: 14px
+      &__phone
+        font-size: 20px
+    &-callback,&-langs
+      display: none
+    &-menu
+      position: absolute
+      flex-direction: column
+      top: 128px
+      left: 0
+      right: 0
+      background: #5F8F00
+      border-radius: 6px
+      transition: .4s
+      opacity: 0
+      visibility: hidden
+      &.active
+        visibility: visible
+        display: flex
+        //z-index: 105
+        opacity: 1
+      &__item
+        padding: 15px 23px
+        font-size: 20px
+        line-height: 20px
+        white-space: nowrap
+        overflow: hidden
+        font-weight: 400
+        text-transform: none
+        text-overflow: ellipsis
+        color: #fff
+        border-bottom: 1px solid #7AAD16
+        &:before
+          content: none
+        &:last-of-type
+          border-bottom: none
+      &__home
+        padding: 15px 23px
+        font-size: 20px
+        line-height: 20px
+        color: #fff
+        border-bottom: 1px solid #7AAD16
+        svg
+          display: none
+  .burger-button
+    display: inline-flex
+    flex: 0 1 65px
+  .padding,.col-12.padding
+    padding-right: 15px
+    padding-left: 15px
+  .breadcrumbs
+    margin-bottom: 10px
+  .page-title
+    padding-right: 0
+    h1
+      font-size: 31px
+      line-height: 35px
+    .tours-icon
+      display: none
+  .main-slider
+    height: auto
+    margin: 0 -15px 0
+    &-container .padding
+      padding-right: 15px
+    .owl-nav
+      display: none
+    .owl-dots
+      position: absolute
+      top: 312px
+      display: flex
+      justify-content: center
+      margin: 0 auto
+      width: 100%
+    .owl-dot
+      background: rgba(255, 255, 255, 0.5)
+      border: 1px solid #E0581E
+      margin-right: 10px
+      width: 15px
+      height: 15px
+      border-radius: 50%
+      cursor: pointer
+      &:last-of-type
+        margin-right: 0
+      &:focus
+        outline: none
+      &.active
+        background: #E0581E
+        border: 1px solid #FFFFFF
+
+    &-item
+      height: auto
+      flex-direction: column
+    &-left
+      order: 2
+      flex: 0 1 auto
+      padding: 23px 15px 70px
+      //min-height: 345px
+      justify-content: flex-start
+      &__title
+        font-size: 31px
+        line-height: 35px
+        margin-bottom: 9px
+      &__desc
+        font-size: 17px
+        line-height: 24px
+    &-image
+      order: 1
+      height: 345px
+      flex: 0 1 auto
+      margin: 0
+  .main-about
+    flex-direction: column
+    padding: 24px 0 60px
+    &:before
+      width: 65px
+      height: 118px
+      background-size: cover
+      left: 0
+    &__title
+      font-size: 28px
+      line-height: 33px
+      margin-bottom: 15px
+      margin-right: 0
+      flex: 0 1 auto
+    &__desc
+      font-size: 19px
+      line-height: 28px
+      flex: 0 1 auto
+      margin-bottom: 26px
+    &__more
+      margin-left: auto
+  .tour-examples
+    padding: 50px 0 36px
+    &:after
+      width: 76px
+      height: 104px
+      background-size: cover
+      right: 0
+    &__figure
+      display: none
+    &__title
+      text-transform: uppercase
+      font-size: 22px
+      line-height: 28px
+      letter-spacing: 0.06em
+      margin-bottom: 21px
+    &-row
+      margin: 0 -15px
+      position: relative
+      .owl-dots
+        top: 250px
+    &-card
+      padding: 0 15px
+      display: flex
+      flex-direction: column
+      align-items: center
+      &.more
+        display: none
+      &__image
+        margin: 0 -15px 15px
+        height: 281px
+        display: flex
+        align-items: center
+        justify-content: center
+        overflow: hidden
+        max-width: none
+        img
+          height: 100%
+          width: auto
+  .more-tours-mobile
+    display: inline-flex
+    color: #E0581E
+    font-size: 17px
+    line-height: 22px
+    position: relative
+    padding-left: 18px
+    padding-right: 36px
+    margin-top: 30px
+    z-index: 10
+    &:after
+      content: ''
+      position: absolute
+      background: url("../svg/more_arrow.svg")
+      width: 10px
+      height: 16px
+      right: 16px
+      background-size: cover
+  .owl-nav
+    display: none
+  .owl-dots
+    position: absolute
+    top: 312px
+    display: flex
+    justify-content: center
+    margin: 0 auto
+    width: 100%
+  .owl-dot
+    background: rgba(255, 255, 255, 0.5)
+    border: 1px solid #E0581E
+    margin-right: 10px
+    width: 15px
+    height: 15px
+    border-radius: 50%
+    cursor: pointer
+    &:last-of-type
+      margin-right: 0
+    &:focus
+      outline: none
+    &.active
+      background: #E0581E
+      border: 1px solid #FFFFFF
+  .main-reviews
+    padding: 60px 0 130px
+    &:before
+      left: 13px
+      background: url("../svg/mobile_review.svg") no-repeat
+      width: 90px
+      height: 88px
+      bottom: 6px
+  .review
+    &-caption
+      padding-right: 64px
+    &-slider
+      margin-right: -15px
+      .owl-dots
+        display: flex
+        bottom: 20px
+        right: 0
+        top: auto
+        justify-content: flex-end
+    &-block
+      padding: 40px 15px 90px 34px
+      border-radius: 20px 0 0 20px
+      &:before
+        right: 0
+      &:after
+        content: none
+      &__more
+        display: none
+        font-size: 16px
+        line-height: 22px
+        color: #E0581E
+        cursor: pointer
+        position: absolute
+        bottom: 48px
+        left: 34px
+        &:after
+          content: ''
+          position: relative
+          background: url("../svg/arrow_down.svg")
+          background-size: cover
+          width: 13px
+          height: 8px
+          display: inline-block
+
+      &__comma
+        display: none
+      &-text
+        font-size: 16px
+        line-height: 24px
+        max-height: 360px
+        overflow: hidden
+  .feedback
+    padding: 60px 0 54px
+    &.detail-feedback
+      &:before
+        background: linear-gradient(180deg, #E09B3D 0%, #7AAD16 100%)
+    &:before
+      background: linear-gradient(180deg, #F1BB71 0%, #DC9638 100%), linear-gradient(180deg, #FFCF8D 0%, #EBAC56 100%), linear-gradient(180deg, #E09B3D 0%, #B66F50 100%)
+    &__title
+      font-size: 22px
+      line-height: 28px!important
+      margin-bottom: 12px!important
+      text-transform: uppercase
+    &__caption
+      font-size: 18px
+      line-height: 24px
+      margin-bottom: 25px
+      text-align: center
+    &-form
+      .input-row
+        flex-direction: column
+        .input-line
+          margin: 0 0 25px
+    &-submit
+      text-align: left
+    .white_man
+      width: 60px
+      height: 130px
+      right: 10px
+      background-size: cover
+  .footer
+    padding: 66px 0 30px
+    display: none
+    &.mobile
+      display: block
+    &-top
+      flex-direction: column
+      align-items: center
+      margin-bottom: 0
+    &__copyright
+      flex: 0 1 auto
+      font-size: 18px
+      line-height: 24px
+      margin-bottom: 30px
+      padding-left: 40px
+    &-bottom
+      flex-direction: column
+      padding-left: 10px
+    &__address
+      margin-right: 0
+      padding-left: 30px
+      flex: 0 1 auto
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 28px
+    &__mail
+      flex: 0 1 auto
+      margin-right: 0
+      margin-bottom: 28px
+      font-size: 16px
+      line-height: 22px
+      svg
+        margin-right: 8px
+    &-phones
+      margin-right: 0
+      flex: 0 1 auto
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 40px
+      svg
+        margin-right: 13px
+        top: 0
+    &-interso
+      flex: 0 1 auto
+      display: flex
+      align-items: center
+      text-align: left
+      margin-left: 0
+      &__copyright
+        font-size: 12px
+        line-height: 17px
+        margin-right: 10px
+        margin-bottom: 0
+    &-social
+      margin-bottom: 35px
+  .tours
+    &-footer
+      font-size: 14px
+      line-height: 20px
+      column-count: 1
+      padding: 40px 0
+    &-desc
+      padding-bottom: 18px
+      &__text
+        font-size: 18px
+        line-height: 26px
+        margin-bottom: 28px
+    &-list
+      padding: 75px 0
+    &-card
+      display: flex
+      flex-direction: column
+      &__image
+        margin: 0 -15px 10px
+      &-wrapper
+        flex: 0 1 100%
+        max-width: 100%
+        margin-bottom: 60px
+      &-info
+        margin-bottom: 10px
+      &__name
+        font-size: 26px
+        line-height: 29px
+        margin-bottom: 10px
+      &__desc
+        font-size: 17px
+  .tags
+    &-row
+      &__caption
+        margin: 0 0 4px
+        margin-right: 15px
+      &__item
+        margin-bottom: 10px
+  .page-title--detail
+    flex-direction: column
+    align-items: flex-start
+    .tour-detail-head
+      margin-top: 28px
+      margin-left: 0
+      &-item
+        text-align: left
+        margin-bottom: 22px
+        &:last-of-type
+          margin-bottom: 0
+  .detail-desc__text
+    font-size: 18px
+    line-height: 26px
+  .detail
+    &-desc
+    &-slider
+      margin: 0 -15px 45px
+      padding-bottom: 40px
+      border-bottom: 1px solid #C4C4C4
+      &-item
+        &__link
+          align-items: flex-end
+          height: 230px
+      &-item__caption
+        padding: 0 15px
+      .owl-dots
+        display: flex
+        top: 195px
+    &-price
+      margin: 27px 0 57px
+      padding: 0
+      flex-direction: column
+      &__title
+        flex: 0 1 auto
+        margin-bottom: 16px
+        font-size: 30px
+        line-height: 36px
+      &-list
+        flex: 0 1 auto
+  .content-slider
+    margin: 0 -15px 34px
+    padding-bottom: 50px
+    border-bottom: 1px solid #C4C4C4
+    &-item
+      display: flex
+      flex-direction: column
+      align-items: center
+      &__link
+        height: 230px
+      &__caption
+        padding: 0 15px
+    .owl-dots
+      display: flex
+      top: 195px
+  .float-slider
+    display: none
+  .content-images
+    margin: 0 -15px 0
+    padding-bottom: 30px
+    border-bottom: 1px solid #C4C4C4
+    position: relative
+    a
+      margin: 0
+      margin-right: 0
+      align-items: flex-end
+      width: 100%!important
+      height: 260px
+    img
+    .owl-dots
+      top: 220px
+  .detail-feedback__man
+    width: 107px
+    height: 95px
+    background-size: cover
+    right: 0
+    left: auto
+    transform: scale(-1,1)
+  .over-tours
+    margin: 0 -15px
+    .owl-dots
+      display: flex
+      top: 216px
+    &-wrapper
+      padding: 60px 0 88px
+    &__title
+      margin-bottom: 22px
+      text-transform: uppercase
+      font-size: 22px
+      line-height: 28px
+      letter-spacing: 0.06em
+    &-item
+      max-width: none
+      padding: 0 15px
+      display: flex
+      flex-direction: column
+      align-items: center
+      &__image
+        margin: 0 -15px 17px
+        max-width: none
+        height: 251px
+  .services-desc
+    font-size: 18px
+    line-height: 26px
+  .services
+    &-icon
+      display: none
+    &-card
+      display: flex
+      flex-direction: column
+      align-items: center
+      &-wrapper
+        flex: 0 1 100%
+        max-width: 100%
+        margin-bottom: 46px
+      &__image
+        margin: 0 -15px 17px
+      &__title
+        font-size: 26px
+        line-height: 28px
+        padding-right: 40px
+        &:after
+          right: 0
+    &-body
+      padding: 23px 0 40px
+      figure.float-right
+        float: none
+        margin: 0 -15px 20px
+        text-align: center
+      p
+        font-size: 18px
+        line-height: 26px
+  .projects
+    &-icon
+      display: none
+    &-desc
+      font-size: 18px
+      line-height: 26px
+      padding: 10px 0 42px
+    &-card
+      &-wrapper
+        flex: 0 1 100%
+        max-width: 100%
+        padding: 0
+      &__image
+        height: 180px
+
+        background-position: center
+      &-text
+        padding: 32px 15px 23px
+      &__name
+        font-size: 28px
+        line-height: 34px
+        margin-bottom: 5px
+      &__desc
+        font-size: 16px
+        line-height: 22px
+  .list-more,.projects-more
+    font-size: 20px
+    line-height: 22px
+  .project
+    &-head
+      height: auto
+      &-item
+        flex-direction: column
+        height: auto
+        margin: 0 -15px
+      &-left
+        order: 2
+        flex: 0 1 auto
+        padding: 25px 15px 60px
+        &__title
+          font-size: 31px
+          line-height: 35px
+          margin-bottom: 15px
+        &__desc
+          font-size: 17px
+          line-height: 24px
+      &-image
+        order: 1
+        margin: 0
+        height: 330px
+        flex: 0 1 auto
+    &-detail
+      &-info
+        padding: 0 0 40px
+      .detail-slider
+        margin: 0 -15px 45px
+      &-item
+        margin-bottom: 36px
+        flex-direction: column
+        &__title
+          font-size: 18px
+          line-height: 24px
+          margin-bottom: 24px
+          flex: 0 1 auto
+        &__text
+          font-size: 17px
+          line-height: 24px
+      ul
+        padding-left: 40px
+  .articles
+    &-icon
+      display: none
+    &-desc
+      font-size: 18px
+      line-height: 26px
+      padding: 10px 0 36px
+    &-list
+      margin-bottom: 20px
+    &-card
+      padding-bottom: 12px
+      position: relative
+      display: flex
+      flex-direction: column
+      max-width: none
+      align-items: flex-start
+      &:before
+        content: ''
+        position: absolute
+        left: -15px
+        top: 0
+        bottom: 0
+        width: 2px
+        background: #DC3D1A
+      &-wrapper
+        flex: 0 1 100%
+        max-width: 100%
+        margin-bottom: 30px
+      &__image
+        //height: 180px
+        height: auto
+        margin: 0 -15px 15px
+        align-items: flex-end
+        z-index: 5
+      &__title
+        font-size: 32px
+        line-height: 32px
+        margin-bottom: 13px
+        margin-right: auto
+      &__desc
+        font-size: 16px
+        line-height: 21px
+        margin-right: auto
+  .article
+    &-image
+      height: 335px
+    &-body
+      padding: 20px 0
+  .content
+    p
+      font-size: 18px
+      line-height: 26px
+    h2
+      font-size: 30px
+      line-height: 38px
+    h3
+      font-size: 28px
+      line-height: 35px
+    h4
+      font-size: 23px
+      line-height: 30px
+    h5
+      font-size: 21px
+      line-height: 28px
+    h6
+      font-size: 17px
+      line-height: 24px
+    blockquote
+      margin: 36px 0
+    figure.float-right,figure.float-left
+      float: none
+      margin: 0 -15px 30px
+    figure
+      width: auto!important
+      img
+        margin: auto
+        display: block
+    figure figcaption
+      padding: 0 15px 40px
+      border-bottom: 1px solid #C4C4C4
+    ul,ol
+      padding-left: 32px
+    table
+      display: block
+  .static-other-articles
+    padding-bottom: 65px
+    .articles-list
+      margin-bottom: 0
+    .list-more
+      display: flex
+    .articles-card-wrapper
+      display: none
+      &:first-child
+        display: block
+  .company
+    &-icon
+      display: none
+    &-about
+      padding: 22px 0 70px
+      &__caption
+        font-size: 22px
+        line-height: 30px
+        margin-bottom: 35px
+    &-numbers
+      flex-direction: column
+      margin: 60px 15px 0
+      &-item
+        margin-bottom: 50px
+        flex: 0 1 auto
+        &:last-child
+          margin-bottom: 0
+        span
+          &:first-child
+            font-size: 80px
+            line-height: 100px
+            margin-bottom: 8px
+          &:last-child
+            font-size: 21px
+            line-height: 26px
+    &-reviews .main-reviews:before
+      left: 13px
+      background: url(../svg/mobile_review.svg) no-repeat
+      width: 90px
+      height: 88px
+      bottom: 6px
+  .docs__item
+    font-size: 18px
+    line-height: 26px
+  .requisites
+    padding: 40px 0 50px
+    flex-direction: column
+    &__title
+      font-size: 28px
+      line-height: 34px
+      margin: 0 0 20px
+      flex: 0 1 auto
+    &-item
+      flex: 0 1 auto
+      margin: 0 0 20px
+  .other-articles__title
+    font-size: 22px
+    line-height: 28px
+    margin-bottom: 20px
+    text-transform: uppercase
+    letter-spacing: 0.06em
+  .collective
+    padding: 70px 0 110px
+    &__title
+      font-size: 22px
+      line-height: 28px
+      margin-bottom: 30px
+      text-transform: uppercase
+      letter-spacing: 0.06em
+    &-row
+      display: block
+      .owl-dots
+        bottom: 66px
+        top: auto
+    &-item
+      flex: 0 1 auto
+      margin: 0 0px 0px
+      width: 220px
+  .contacts
+    padding: 20px 0 42px
+    &-row
+      flex-direction: column
+    &-icon
+      display: none
+    &__title
+      font-size: 28px
+      margin: 0 0 20px
+      flex: 0 1 auto
+    &-item
+      flex: 0 1 auto
+      margin: 0 0 18px
+      &.address
+        flex: 0 1 auto
+        margin: 0 0 18px
+  .map
+    height: 600px
+  .contacts-collective
+    padding: 50px 0 110px
+  .error-page
+    margin: 50px auto
+    padding: 0 15px
+    flex: 0 1 auto
+    text-align: left
+    &__title
+      font-size: 31px
+      line-height: 35px
+      margin-bottom: 15px
+    &__desc
+      font-size: 18px
+      line-height: 28px
+    &-wrapper
+      .header-logotype
+        img
+          display: none
+        .grey_logo
+          display: block
+        &-text
+          &__name
+            font-size: 24px
+            line-height: 20px
+            color: #8D8D8D
+            margin-bottom: 4px
+          &__caption
+            color: #BCBCBC
+            font-size: 14px
+            line-height: 20px
+            max-width: none
+      .burger-button
+        display: none
+@media (min-width: 700px) and (max-width: 1120px)
+  .projects
+    &-card
+      &-wrapper
+      &__image
+        height: 305px
+  .articles
+    &-card
+      &__image
+        height: 305px
+        z-index: 5
+  .tours-card
+    &-wrapper
+      flex: 0 1 50%
+      max-width: 380px
+      margin: 0 auto 60px

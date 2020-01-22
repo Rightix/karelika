@@ -745,7 +745,7 @@ label
 // ***** Template
 
 // *** Header
-.padding
+.padding,.padding.col-12
   padding-left: 50px
   padding-right: 50px
 .header
@@ -852,6 +852,7 @@ label
   &-menu
     display: flex
     justify-content: center
+    z-index: 105
     &__item
       font-size: 19px
       letter-spacing: 0.05em
@@ -877,6 +878,7 @@ label
       padding-left: 25px
       display: inline-flex
       align-items: center
+      font-size: 0
       svg
         width: 19px
         height: 16px
@@ -1130,7 +1132,7 @@ label
 
 .review
   &-slider
-    position: relative
+    //position: relative
     .owl-stage
       align-items: center
     &-item
@@ -1250,7 +1252,7 @@ label
     height: 183px
     background: url("../svg/man_white.svg")
 .footer
-  padding: 84px 0 48px
+  padding: 84px 0px 48px
   position: relative
   &:before
     content: ''
@@ -1412,7 +1414,7 @@ label
     font-weight: 700
     font-family: "Bitter", serif
     color: #fff
-.col-10
+.col-10,.col-lg-10
   margin: 0 auto
 .tours-icon
   content: ''
@@ -1503,10 +1505,11 @@ label
       display: inline-flex
       justify-content: center
       align-items: center
-      border-bottom: 2px solid #E0581E
       margin-bottom: 10px
+      padding-bottom: 3px
       img
         max-width: 100%
+        border-bottom: 2px solid #E0581E
     &-info
       display: flex
       justify-content: space-between
@@ -1530,6 +1533,9 @@ label
         border-radius: 6px
         text-decoration: none
         padding: 0 10px
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
     &__name
       font-size: 32px
       line-height: 36px
@@ -1578,7 +1584,7 @@ label
   p
     color: #000
 .detail-desc
-  padding: 10px 0 40px
+  padding: 10px 15px 40px
   color: #000
   .tags-row
     margin-bottom: 10px
@@ -1615,6 +1621,9 @@ label
     .owl-stage-outer
       overflow: hidden
     &-item
+      display: flex
+      flex-direction: column
+      align-items: center
       &__link
         height: 259px
         display: flex
@@ -1830,7 +1839,7 @@ label
       max-width: 100%
       height: 195px
       display: flex
-      align-items: center
+      align-items: flex-end
       justify-content: center
       overflow: hidden
       margin-bottom: 17px
@@ -2106,7 +2115,7 @@ label
       height: 305px
       display: flex
       justify-content: center
-      align-items: center
+      align-items: flex-end
       overflow: hidden
       margin-bottom: 18px
       text-decoration: none
@@ -2127,6 +2136,9 @@ label
       font-size: 18px
       line-height: 24px
       color: #e0581e
+  &-wrapper
+    .list-more
+      margin-bottom: 58px
 .article
   &-author
     font-size: 18px
@@ -2141,16 +2153,11 @@ label
         transform: none
         bottom: -36px
   &-image
-    max-height: 550px
+    height: 550px
     overflow: hidden
     flex-shrink: 0
-    display: flex
-    align-items: center
-    justify-content: center
-    //min-height: 550px
-    //height: 550px
-    //background-position: center
-    //background-size: cover
+    background-size: cover
+    background-position: center
     img
       max-width: 100%
   &-body
@@ -2317,6 +2324,7 @@ label
       justify-content: center
       overflow: hidden
       margin-bottom: 19px
+      padding-bottom: 3px
       img
         max-width: 100%
         border-bottom: 3px solid #E0581E
@@ -2446,6 +2454,7 @@ label
   align-items: center
   position: relative
   text-decoration: none
+  font-weight: 700
   margin-top: -6px
   &:after
     content: ''
@@ -2456,3 +2465,71 @@ label
     display: inline-block
     margin-left: 24px
     top: 2px
+.burger-button
+  display: none
+  width: 65px
+  height: 65px
+  background: #5F8F00
+  position: relative
+  border-radius: 6px
+  cursor: pointer
+  &:after
+    content: ''
+    position: absolute
+    background: url("../svg/burger.svg")
+    width: 28px
+    height: 25px
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+.more-tours-mobile,.review-block__more
+  display: none
+.content-images
+  display: flex
+  flex-wrap: wrap
+.projects-more
+  font-size: 24px
+  line-height: 28px
+  color: #5F8F00
+  flex: 0 0 100%
+  text-align: center
+  justify-content: center
+  display: flex
+  align-items: center
+  position: relative
+  text-decoration: none
+  font-weight: 700
+  margin-bottom: 55px
+  &:after
+    content: ''
+    width: 21px
+    height: 13px
+    background: url("../svg/more_green.svg") no-repeat
+    position: relative
+    display: inline-block
+    margin-left: 24px
+    top: 2px
+.article-wrapper + footer .footer:before
+  content: none
+.article-wrapper
+  position: relative
+  margin-bottom: 0
+  &:after
+    content: ''
+    position: absolute
+    height: 36px
+    background: url(../svg/slider_pattern.svg) repeat-x
+    background-position: 50%
+    left: -200%
+    right: -200%
+    bottom: 0
+    transform: scale(1,-1)
+.static-other-articles
+  .list-more
+    display: none
+.footer.mobile
+  display: none
+.grey_logo
+  display: none
