@@ -803,6 +803,8 @@ label
       transition: .2s
       &:hover
         color: #426400
+        &:before
+          background: url("../svg/mail_dark.svg") no-repeat
       &:before
         content: ''
         width: 17px
@@ -810,6 +812,7 @@ label
         position: absolute
         left: 0
         bottom: 1px
+        transition: .2s
         background: url("../svg/mail.svg") no-repeat
     &__phone
       font-size: 24px
@@ -913,9 +916,9 @@ label
   text-decoration: none
   transition: .4s
   &:hover
-    background: #E0581E
-    color: #fff
-    border-color: #E0581E
+    background: #E0581E!important
+    color: #fff!important
+    border-color: #E0581E !important
 .main-slider
   height: 490px
   position: relative
@@ -1101,12 +1104,15 @@ label
       margin-right: 0
     &__image
       margin-bottom: 15px
-      display: block
+      display: flex
+      align-items: center
+      justify-content: center
       text-decoration: none
+      overflow: hidden
+      border-bottom: 2px solid #DC3D1A
       img
         max-width: 100%
-        border-bottom: 2px solid #DC3D1A
-        transition: .4s
+        transition: 3s
     &__title
       display: block
       font-size: 23px
@@ -1488,6 +1494,10 @@ label
     white-space: nowrap
     padding: 2px 12px
     margin-bottom: 12px
+    transition: .2s
+    &:hover
+      color: #000
+      border-color: #E0581E
     &:last-of-type
       margin-right: 0
 .tours
@@ -1528,12 +1538,17 @@ label
         z-index: -1
         background: linear-gradient(0deg, #FFF4E8, #FFF4E8), #F5F5F5
   &-card
+    &:hover
+      .tours-card__image
+        img
+          transform: scale(1.05)
     &-wrapper
       padding: 0 28px
       margin-bottom: 63px
       flex: 0 1 33.333333%
       max-width: 33.333%
     &__image
+      max-width: 100%
       height: 228px
       overflow: hidden
       display: inline-flex
@@ -1542,8 +1557,9 @@ label
       margin-bottom: 10px
       padding-bottom: 3px
       img
-        max-width: 100%
+        //max-width: 100%
         border-bottom: 2px solid #E0581E
+        transition: 4s
     &-info
       display: flex
       justify-content: space-between
@@ -1570,6 +1586,10 @@ label
         white-space: nowrap
         overflow: hidden
         text-overflow: ellipsis
+        transition: .2s
+        &:hover
+          color: #000
+          border-color: #E0581E
     &__name
       font-size: 32px
       line-height: 36px
@@ -1578,6 +1598,9 @@ label
       font-weight: 700
       text-decoration: none
       display: block
+      transition: .2s
+      &:hover
+        color: #426400
     &__desc
       font-size: 18px
       line-height: 23px
@@ -1635,6 +1658,9 @@ label
   &-slider
     margin: 0 -70px 60px
     position: relative
+    &-item:hover
+      .detail-slider-item__caption
+        color: #000
     .owl-dots
       display: none
     .owl-nav
@@ -1680,6 +1706,7 @@ label
         font-size: 14px
         line-height: 19px
         color: #8d8d8d
+        transition: .4s
   &-plan
     p
       color: #4f4f4f
@@ -1737,6 +1764,9 @@ label
     right: -55px
     transform: scale(-1,1)
   &-item
+    &:hover
+      .content-slider-item__caption
+        color: #000
     &__link
       height: 167px
       display: flex
@@ -1759,7 +1789,7 @@ label
       font-size: 14px
       line-height: 19px
       color: #8d8d8d
-
+      transition: .4s
 .float-slider
   width: 520px
   float: right
@@ -1785,6 +1815,9 @@ label
     right: 20px
     transform: scale(-1,1)
   &-item
+    &:hover
+      .float-slider-item__caption
+        color: #000
     &__link
       overflow: hidden
       display: flex
@@ -1806,6 +1839,7 @@ label
       font-size: 14px
       line-height: 19px
       color: #8d8d8d
+      transition: .4s
 .zoom-image
   display: inline-flex
   align-items: center
@@ -1869,6 +1903,10 @@ label
     color: #8D8D8D
   &-item
     max-width: 281px
+    &:hover
+      .over-tours-item__image
+        img
+          transform: scale(1.05)
     &__image
       max-width: 100%
       height: 195px
@@ -1880,12 +1918,16 @@ label
       border-bottom: 2px solid #E0581E
       img
         max-width: 100%
+        transition: 4s
     &__name
       font-size: 28px
       font-weight: 700
       line-height: 32px
       color: #5f8f00
       text-decoration: none
+      transition: .2s
+      &:hover
+        color: #426400
   .tours-card-tags
     margin-bottom: 7px
   .owl-stage-outer
@@ -1927,8 +1969,11 @@ label
   &-card
     display: block
     text-decoration: none
-    &:hover .services-card__image img
-      transform: scale(1.05)
+    &:hover
+      .services-card__image img
+        transform: scale(1.05)
+      .services-card__title
+        color: #000
     &-wrapper
       padding: 0 20px
       flex: 0 1 33.333%
@@ -1950,6 +1995,7 @@ label
       font-size: 28px
       line-height: 32px
       color: #e0581e
+      transition: .4s
       &:after
         content: ''
         position: absolute
@@ -1994,7 +2040,10 @@ label
     transition: .4s
     opacity: 1
     &:hover
-      opacity: 0.92
+      .projects-card-text
+        background: #334D00
+      .projects-card__desc
+        color: #fff
     &-wrapper
       flex: 0 1 50%
       max-width: 50%
@@ -2011,6 +2060,7 @@ label
       flex-direction: column
       justify-content: flex-end
       height: 100%
+      transition: .4s
     &__name
       font-family: "Bitter", serif
       font-size: 32px
@@ -2021,7 +2071,7 @@ label
       color: #D9F2A9
       font-size: 18px
       line-height: 24px
-
+      transition: .4s
   &-desc
     font-size: 19px
     line-height: 28px
@@ -2139,8 +2189,11 @@ label
     margin: 0 -18px
   &-card
     max-width: 590px
-    &:hover .articles-card__image img
-      transform: scale(1.05)
+    &:hover
+      .articles-card__image img
+        transform: scale(1.05)
+      .articles-card__desc
+        color: #A63A0C
     &-wrapper
       padding: 0 18px
       margin-bottom: 64px
@@ -2170,6 +2223,7 @@ label
       font-size: 18px
       line-height: 24px
       color: #e0581e
+      transition: .4s
   &-wrapper
     .list-more
       margin-bottom: 58px
@@ -2522,6 +2576,11 @@ label
 .content-images
   display: flex
   flex-wrap: wrap
+  a
+    transition: .4s
+    opacity: 1
+    &:hover
+      opacity: 0.9
 .projects-more
   font-size: 24px
   line-height: 28px
@@ -2583,3 +2642,9 @@ label
   bottom: -7px
   left: -7px
   right: -7px
+.owl-nav button
+  transition: .4s
+  opacity: 1
+  &:hover
+    opacity: 0.8
+    transition: .4s

@@ -825,6 +825,8 @@ label {
       transition: .2s; }
       .header-contacts__mail:hover {
         color: #426400; }
+        .header-contacts__mail:hover:before {
+          background: url("../svg/mail_dark.svg") no-repeat; }
       .header-contacts__mail:before {
         content: '';
         width: 17px;
@@ -832,6 +834,8 @@ label {
         position: absolute;
         left: 0;
         bottom: 1px;
+        -webkit-transition: .2s;
+        transition: .2s;
         background: url("../svg/mail.svg") no-repeat; }
     .header-contacts__phone {
       font-size: 24px;
@@ -962,9 +966,9 @@ label {
   -webkit-transition: .4s;
   transition: .4s; }
   .border-button:hover {
-    background: #E0581E;
-    color: #fff;
-    border-color: #E0581E; }
+    background: #E0581E !important;
+    color: #fff !important;
+    border-color: #E0581E !important; }
 
 .main-slider {
   height: 490px;
@@ -1170,13 +1174,22 @@ label {
       margin-right: 0; }
     .tour-examples-card__image {
       margin-bottom: 15px;
-      display: block;
-      text-decoration: none; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-decoration: none;
+      overflow: hidden;
+      border-bottom: 2px solid #DC3D1A; }
       .tour-examples-card__image img {
         max-width: 100%;
-        border-bottom: 2px solid #DC3D1A;
-        -webkit-transition: .4s;
-        transition: .4s; }
+        -webkit-transition: 3s;
+        transition: 3s; }
     .tour-examples-card__title {
       display: block;
       font-size: 23px;
@@ -1621,7 +1634,12 @@ label {
     margin-right: 12px;
     white-space: nowrap;
     padding: 2px 12px;
-    margin-bottom: 12px; }
+    margin-bottom: 12px;
+    -webkit-transition: .2s;
+    transition: .2s; }
+    .tags-row__item:hover {
+      color: #000;
+      border-color: #E0581E; }
     .tags-row__item:last-of-type {
       margin-right: 0; }
 
@@ -1667,6 +1685,10 @@ label {
       background: -webkit-gradient(linear, left bottom, left top, from(#FFF4E8), to(#FFF4E8)), #F5F5F5;
       background: linear-gradient(0deg, #FFF4E8, #FFF4E8), #F5F5F5; }
 
+.tours-card:hover .tours-card__image img {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05); }
+
 .tours-card-wrapper {
   padding: 0 28px;
   margin-bottom: 63px;
@@ -1676,6 +1698,7 @@ label {
   max-width: 33.333%; }
 
 .tours-card__image {
+  max-width: 100%;
   height: 228px;
   overflow: hidden;
   display: -webkit-inline-box;
@@ -1690,8 +1713,9 @@ label {
   margin-bottom: 10px;
   padding-bottom: 3px; }
   .tours-card__image img {
-    max-width: 100%;
-    border-bottom: 2px solid #E0581E; }
+    border-bottom: 2px solid #E0581E;
+    -webkit-transition: 4s;
+    transition: 4s; }
 
 .tours-card-info {
   display: -webkit-box;
@@ -1726,7 +1750,12 @@ label {
     padding: 0 10px;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    -webkit-transition: .2s;
+    transition: .2s; }
+    .tours-card-tags__item:hover {
+      color: #000;
+      border-color: #E0581E; }
 
 .tours-card__name {
   font-size: 32px;
@@ -1735,7 +1764,11 @@ label {
   margin-bottom: 15px;
   font-weight: 700;
   text-decoration: none;
-  display: block; }
+  display: block;
+  -webkit-transition: .2s;
+  transition: .2s; }
+  .tours-card__name:hover {
+    color: #426400; }
 
 .tours-card__desc {
   font-size: 18px;
@@ -1802,6 +1835,8 @@ label {
 .detail-slider {
   margin: 0 -70px 60px;
   position: relative; }
+  .detail-slider-item:hover .detail-slider-item__caption {
+    color: #000; }
   .detail-slider .owl-dots {
     display: none; }
   .detail-slider .owl-nav button {
@@ -1859,7 +1894,9 @@ label {
     .detail-slider-item__caption {
       font-size: 14px;
       line-height: 19px;
-      color: #8d8d8d; }
+      color: #8d8d8d;
+      -webkit-transition: .4s;
+      transition: .4s; }
 
 .detail-plan p {
   color: #4f4f4f; }
@@ -1924,6 +1961,8 @@ label {
     right: -55px;
     -webkit-transform: scale(-1, 1);
     transform: scale(-1, 1); }
+  .content-slider-item:hover .content-slider-item__caption {
+    color: #000; }
   .content-slider-item__link {
     height: 167px;
     display: -webkit-box;
@@ -1951,7 +1990,9 @@ label {
   .content-slider-item__caption {
     font-size: 14px;
     line-height: 19px;
-    color: #8d8d8d; }
+    color: #8d8d8d;
+    -webkit-transition: .4s;
+    transition: .4s; }
 
 .float-slider {
   width: 520px;
@@ -1977,6 +2018,8 @@ label {
     right: 20px;
     -webkit-transform: scale(-1, 1);
     transform: scale(-1, 1); }
+  .float-slider-item:hover .float-slider-item__caption {
+    color: #000; }
   .float-slider-item__link {
     overflow: hidden;
     display: -webkit-box;
@@ -2003,7 +2046,9 @@ label {
   .float-slider-item__caption {
     font-size: 14px;
     line-height: 19px;
-    color: #8d8d8d; }
+    color: #8d8d8d;
+    -webkit-transition: .4s;
+    transition: .4s; }
 
 .zoom-image {
   display: -webkit-inline-box;
@@ -2077,6 +2122,9 @@ label {
     color: #8D8D8D; }
   .over-tours-item {
     max-width: 281px; }
+    .over-tours-item:hover .over-tours-item__image img {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05); }
     .over-tours-item__image {
       max-width: 100%;
       height: 195px;
@@ -2093,13 +2141,19 @@ label {
       margin-bottom: 17px;
       border-bottom: 2px solid #E0581E; }
       .over-tours-item__image img {
-        max-width: 100%; }
+        max-width: 100%;
+        -webkit-transition: 4s;
+        transition: 4s; }
     .over-tours-item__name {
       font-size: 28px;
       font-weight: 700;
       line-height: 32px;
       color: #5f8f00;
-      text-decoration: none; }
+      text-decoration: none;
+      -webkit-transition: .2s;
+      transition: .2s; }
+      .over-tours-item__name:hover {
+        color: #426400; }
   .over-tours .tours-card-tags {
     margin-bottom: 7px; }
   .over-tours .owl-stage-outer {
@@ -2150,6 +2204,8 @@ label {
   .services-card:hover .services-card__image img {
     -webkit-transform: scale(1.05);
     transform: scale(1.05); }
+  .services-card:hover .services-card__title {
+    color: #000; }
   .services-card-wrapper {
     padding: 0 20px;
     -webkit-box-flex: 0;
@@ -2179,7 +2235,9 @@ label {
     font-weight: 700;
     font-size: 28px;
     line-height: 32px;
-    color: #e0581e; }
+    color: #e0581e;
+    -webkit-transition: .4s;
+    transition: .4s; }
     .services-card__title:after {
       content: '';
       position: absolute;
@@ -2236,8 +2294,10 @@ label {
   -webkit-transition: .4s;
   transition: .4s;
   opacity: 1; }
-  .projects-card:hover {
-    opacity: 0.92; }
+  .projects-card:hover .projects-card-text {
+    background: #334D00; }
+  .projects-card:hover .projects-card__desc {
+    color: #fff; }
   .projects-card-wrapper {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 50%;
@@ -2263,7 +2323,9 @@ label {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    height: 100%; }
+    height: 100%;
+    -webkit-transition: .4s;
+    transition: .4s; }
   .projects-card__name {
     font-family: "Bitter", serif;
     font-size: 32px;
@@ -2273,7 +2335,9 @@ label {
   .projects-card__desc {
     color: #D9F2A9;
     font-size: 18px;
-    line-height: 24px; }
+    line-height: 24px;
+    -webkit-transition: .4s;
+    transition: .4s; }
 
 .projects-desc {
   font-size: 19px;
@@ -2417,6 +2481,8 @@ label {
   .articles-card:hover .articles-card__image img {
     -webkit-transform: scale(1.05);
     transform: scale(1.05); }
+  .articles-card:hover .articles-card__desc {
+    color: #A63A0C; }
   .articles-card-wrapper {
     padding: 0 18px;
     margin-bottom: 64px;
@@ -2453,7 +2519,9 @@ label {
   .articles-card__desc {
     font-size: 18px;
     line-height: 24px;
-    color: #e0581e; }
+    color: #e0581e;
+    -webkit-transition: .4s;
+    transition: .4s; }
 
 .articles-wrapper .list-more {
   margin-bottom: 58px; }
@@ -2872,6 +2940,12 @@ label {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+  .content-images a {
+    -webkit-transition: .4s;
+    transition: .4s;
+    opacity: 1; }
+    .content-images a:hover {
+      opacity: 0.9; }
 
 .projects-more {
   font-size: 24px;
@@ -2938,3 +3012,12 @@ label {
   bottom: -7px;
   left: -7px;
   right: -7px; }
+
+.owl-nav button {
+  -webkit-transition: .4s;
+  transition: .4s;
+  opacity: 1; }
+  .owl-nav button:hover {
+    opacity: 0.8;
+    -webkit-transition: .4s;
+    transition: .4s; }
