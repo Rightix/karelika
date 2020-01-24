@@ -5,6 +5,7 @@ $(document).ready(function () {
     $('.main-slider').owlCarousel({
         // stagePadding: 100,
         items: 1,
+        nav: true,
         mouseDrag: false,
         margin: 1000,
         animateOut: 'fadeOut',
@@ -23,6 +24,7 @@ $(document).ready(function () {
 
     $('.review-slider').owlCarousel({
         items: 1,
+        nav: true,
         margin: 30,
         responsive: {
             0: {
@@ -38,6 +40,7 @@ $(document).ready(function () {
 
     $('.detail-slider').owlCarousel({
         margin: 24,
+        nav: true,
         responsive: {
             1120: {
                 items: 3,
@@ -51,6 +54,7 @@ $(document).ready(function () {
     $('.content-slider').owlCarousel({
         items: 4,
         margin: 22,
+        nav: true,
         responsive: {
             0: {
                 items: 1,
@@ -64,11 +68,13 @@ $(document).ready(function () {
 
     $('.float-slider').owlCarousel({
         items: 1,
+        nav: true,
     });
 
     $('.over-tours').owlCarousel({
         items: 4,
         margin: 30,
+        nav: true,
         responsive: {
             0: {
                 items: 1,

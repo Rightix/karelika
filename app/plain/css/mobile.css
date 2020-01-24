@@ -104,15 +104,25 @@
   .breadcrumbs {
     margin-bottom: 10px; }
   .page-title {
+    padding: 58px 0;
     padding-right: 0; }
     .page-title h1 {
       font-size: 31px;
       line-height: 35px; }
     .page-title .tours-icon {
       display: none; }
+    .page-title:after, .page-title:before {
+      height: 31px;
+      background: url("../svg/slider_pattern_mobile.svg") repeat-x;
+      background-position: center; }
   .main-slider {
     height: auto;
     margin: 0 -15px 0; }
+    .main-slider-container:before {
+      content: none; }
+    .main-slider-container:after {
+      background: url("../svg/slider_pattern_mobile.svg") repeat-x;
+      height: 31px; }
     .main-slider-container .padding {
       padding-right: 15px; }
     .main-slider .owl-nav {
@@ -311,6 +321,9 @@
       width: 90px;
       height: 88px;
       bottom: 6px; }
+    .main-reviews-wrapper {
+      background: -webkit-gradient(linear, left top, left bottom, from(#ADCC80), to(#88B448));
+      background: linear-gradient(180deg, #ADCC80 0%, #88B448 100%); }
   .review-caption {
     padding-right: 64px; }
   .review-slider {
@@ -820,6 +833,12 @@
     height: 335px; }
   .article-body {
     padding: 20px 0; }
+  .article-head .page-title {
+    padding-bottom: 19px; }
+    .article-head .page-title:after {
+      bottom: -31px;
+      background: url("../svg/article_pattern_mobile.svg");
+      background-position: center; }
   .content p {
     font-size: 18px;
     line-height: 26px; }
@@ -928,6 +947,14 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 0.06em; }
+  .other-articles:after {
+    height: 31px;
+    background: url("../svg/slider_pattern_mobile.svg") no-repeat;
+    background-position: center; }
+  .article-wrapper:after {
+    background: url("../svg/slider_pattern_mobile.svg") no-repeat;
+    height: 31px;
+    background-position: center; }
   .collective {
     padding: 70px 0 110px; }
     .collective__title {

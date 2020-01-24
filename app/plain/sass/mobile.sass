@@ -84,15 +84,26 @@
   .breadcrumbs
     margin-bottom: 10px
   .page-title
+    padding: 58px 0
     padding-right: 0
     h1
       font-size: 31px
       line-height: 35px
     .tours-icon
       display: none
+    &:after,&:before
+      height: 31px
+      background: url("../svg/slider_pattern_mobile.svg") repeat-x
+      background-position: center
   .main-slider
     height: auto
     margin: 0 -15px 0
+    &-container
+      &:before
+        content: none
+      &:after
+        background: url("../svg/slider_pattern_mobile.svg") repeat-x
+        height: 31px
     &-container .padding
       padding-right: 15px
     .owl-nav
@@ -250,6 +261,8 @@
       width: 90px
       height: 88px
       bottom: 6px
+    &-wrapper
+      background: linear-gradient(180deg, #ADCC80 0%, #88B448 100%)
   .review
     &-caption
       padding-right: 64px
@@ -664,6 +677,13 @@
       height: 335px
     &-body
       padding: 20px 0
+    &-head
+      .page-title
+        padding-bottom: 19px
+        &:after
+          bottom: -31px
+          background: url("../svg/article_pattern_mobile.svg")
+          background-position: center
   .content
     p
       font-size: 18px
@@ -761,6 +781,16 @@
     margin-bottom: 20px
     text-transform: uppercase
     letter-spacing: 0.06em
+  .other-articles
+    &:after
+      height: 31px
+      background: url("../svg/slider_pattern_mobile.svg") no-repeat
+      background-position: center
+  .article-wrapper
+    &:after
+      background: url("../svg/slider_pattern_mobile.svg") no-repeat
+      height: 31px
+      background-position: center
   .collective
     padding: 70px 0 110px
     &__title

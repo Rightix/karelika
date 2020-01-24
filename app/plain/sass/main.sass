@@ -800,6 +800,9 @@ label
       text-decoration: none
       position: relative
       padding-left: 26px
+      transition: .2s
+      &:hover
+        color: #426400
       &:before
         content: ''
         width: 17px
@@ -844,11 +847,16 @@ label
       border: 1px solid #D9F2A9
       border-radius: 20px
       text-decoration: none
+      transition: .2s
+      &:hover
+        border-color: #7AAD16
+        background: #F3FFDD
       &:last-of-type
         margin-right: 0
       &.current
         border: 1px solid #000
         color: #000
+        background: none
   &-menu
     display: flex
     justify-content: center
@@ -862,6 +870,11 @@ label
       padding: 0 26px
       font-weight: 600
       text-decoration: none
+      transition: .2s
+      &:hover
+        color: #E0581E
+      &.current
+        color: #E0581E
       &:before
         content: ''
         position: absolute
@@ -898,9 +911,16 @@ label
   align-items: center
   justify-content: center
   text-decoration: none
+  transition: .4s
+  &:hover
+    background: #E0581E
+    color: #fff
+    border-color: #E0581E
 .main-slider
   height: 490px
   position: relative
+  .owl-dots
+    display: none
   &-container
     background: #83ac4e
     position: relative
@@ -978,8 +998,8 @@ label
       overflow: hidden
   .owl-nav
     button
-      width: 21px
-      height: 34px
+      width: 20px
+      height: 33px
       background: url("../svg/orange_arrow.svg")
       background-size: cover
       position: absolute
@@ -989,8 +1009,15 @@ label
       border: none
       cursor: pointer
       font-size: 0
+      transition: .4s
       &:focus
         outline: none
+      &:hover
+        background: url("../svg/slider_hover.svg")
+        transition: .4s
+      &.disabled
+        background: url("../svg/slider_hover.svg")
+
   .owl-prev
     left: 0
   .owl-next
@@ -1067,6 +1094,9 @@ label
   &-card
     flex: 0 1 271px
     margin-right: 43px
+    &:hover
+      .tour-examples-card__image img
+        transform: scale(1.05)
     &:last-child
       margin-right: 0
     &__image
@@ -1076,6 +1106,7 @@ label
       img
         max-width: 100%
         border-bottom: 2px solid #DC3D1A
+        transition: .4s
     &__title
       display: block
       font-size: 23px
@@ -1155,8 +1186,13 @@ label
         border: none
         font-size: 0
         cursor: pointer
+        transition: .4s
+        opacity: 1
         &:focus
           outline: none
+        &:hover
+          opacity: 0.75
+          transition: .4s
     .owl-prev
       left: 0
     .owl-next
@@ -1396,7 +1432,6 @@ label
     right: -200%
     height: 36px
     background: url("../svg/slider_pattern.svg") repeat-x
-    background-position: center
   &:after
     content: ''
     position: absolute
@@ -1405,7 +1440,6 @@ label
     right: -200%
     height: 36px
     background: url("../svg/slider_pattern.svg") repeat-x
-    background-position: center
     transform: scale(1,-1)
   h1
     font-size: 45px
@@ -2148,8 +2182,7 @@ label
     .page-title
       padding-bottom: 7px
       &:after
-        background: url("../svg/article_pattern.svg") repeat-x
-        background-position: center
+        background: url("../svg/article_pattern.svg")
         transform: none
         bottom: -36px
   &-image
@@ -2533,3 +2566,20 @@ label
   display: none
 .grey_logo
   display: none
+@media (min-width: 1340px)
+  .article-head .page-title
+  //  &:after
+  //    background: url("../svg/article_pattern_xl.svg") repeat
+  //    transform: scale(1,-1)
+  //    height: 59px
+  //    bottom: -58px
+  //.page-title
+  //  &:before
+  //    background: url("../svg/slider_pattern_xl.svg")
+.owl-nav button:after
+  content: ''
+  position: absolute
+  top: -7px
+  bottom: -7px
+  left: -7px
+  right: -7px
