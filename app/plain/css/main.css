@@ -128,9 +128,11 @@ a {
     margin-top: 12px;
     color: #8D8D8D; }
   .content figure.float-right {
-    margin-left: 60px; }
+    margin-left: 60px;
+    padding-top: 10px; }
   .content figure.float-left {
-    margin-right: 60px; }
+    margin-right: 60px;
+    padding-top: 10px; }
 
 .content p {
   color: #5E5E5E;
@@ -144,10 +146,13 @@ a {
   max-width: 100% !important;
   margin: 25px 0; }
 
+.content p + ul, .content p + ol {
+  margin-top: -10px; }
+
 .content ul {
   list-style-type: none;
   padding-left: 50px;
-  margin: 30px 0 54px;
+  margin: 10px 0 30px;
   font-size: 16px;
   line-height: 24px;
   color: #5E5E5E; }
@@ -182,7 +187,7 @@ a {
 .content ol {
   counter-reset: a;
   padding-left: 50px;
-  margin: 33px 0 49px;
+  margin: 10px 0 30px;
   line-height: 28px;
   font-size: 17px;
   color: #5E5E5E; }
@@ -893,7 +898,9 @@ label {
       .header-langs__item.current {
         border: 1px solid #000;
         color: #000;
-        background: none; }
+        background: none;
+        pointer-events: none;
+        cursor: default; }
   .header-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1003,6 +1010,9 @@ label {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    .main-slider-item:hover .main-slider-image {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05); }
   .main-slider-left {
     height: 100%;
     -webkit-box-flex: 0;
@@ -1041,7 +1051,9 @@ label {
     -ms-flex: 0 1 820px;
     flex: 0 1 820px;
     margin-left: -135px;
-    background-size: cover; }
+    background-size: cover;
+    -webkit-animation: 10s linear 0s infinite alternate zoom;
+    animation: 10s linear 0s infinite alternate zoom; }
   .main-slider-container .padding {
     padding-right: 0; }
   .main-slider .owl-item {
@@ -1082,6 +1094,22 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  to {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); } }
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  to {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); } }
 
 .main-about {
   display: -webkit-box;
@@ -1167,6 +1195,8 @@ label {
     -ms-flex: 0 1 271px;
     flex: 0 1 271px;
     margin-right: 43px; }
+    .tour-examples-card.only-xl {
+      display: none; }
     .tour-examples-card:hover .tour-examples-card__image img {
       -webkit-transform: scale(1.05);
       transform: scale(1.05); }
@@ -1711,11 +1741,11 @@ label {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 10px;
-  padding-bottom: 3px; }
+  padding-bottom: 3px;
+  border-bottom: 2px solid #E0581E; }
   .tours-card__image img {
-    border-bottom: 2px solid #E0581E;
-    -webkit-transition: 4s;
-    transition: 4s; }
+    -webkit-transition: 1s;
+    transition: 1s; }
 
 .tours-card-info {
   display: -webkit-box;
@@ -1837,6 +1867,9 @@ label {
   position: relative; }
   .detail-slider-item:hover .detail-slider-item__caption {
     color: #000; }
+  .detail-slider-item:hover .detail-slider-item__link img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
   .detail-slider .owl-dots {
     display: none; }
   .detail-slider .owl-nav button {
@@ -1890,7 +1923,9 @@ label {
         right: 7px;
         background: url("../svg/zoom.svg"); }
       .detail-slider-item__link img {
-        max-width: 100%; }
+        max-width: 100%;
+        -webkit-transition: 1s;
+        transition: 1s; }
     .detail-slider-item__caption {
       font-size: 14px;
       line-height: 19px;
@@ -1963,6 +1998,9 @@ label {
     transform: scale(-1, 1); }
   .content-slider-item:hover .content-slider-item__caption {
     color: #000; }
+  .content-slider-item:hover .content-slider-item__link img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
   .content-slider-item__link {
     height: 167px;
     display: -webkit-box;
@@ -1986,7 +2024,9 @@ label {
       width: 18px;
       height: 18px; }
     .content-slider-item__link img {
-      max-width: 100%; }
+      max-width: 100%;
+      -webkit-transition: 1s;
+      transition: 1s; }
   .content-slider-item__caption {
     font-size: 14px;
     line-height: 19px;
@@ -2066,6 +2106,9 @@ label {
   margin-right: 22px; }
   .zoom-image img {
     max-width: 100%; }
+  .zoom-image:hover img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
   .zoom-image:after {
     content: '';
     position: absolute;
@@ -2074,6 +2117,9 @@ label {
     background: url("../svg/zoom.svg");
     width: 18px;
     height: 18px; }
+  .zoom-image img {
+    -webkit-transition: 1s;
+    transition: 1s; }
 
 .detail-feedback {
   margin: 0 auto;
@@ -2142,8 +2188,8 @@ label {
       border-bottom: 2px solid #E0581E; }
       .over-tours-item__image img {
         max-width: 100%;
-        -webkit-transition: 4s;
-        transition: 4s; }
+        -webkit-transition: 1s;
+        transition: 1s; }
     .over-tours-item__name {
       font-size: 28px;
       font-weight: 700;
@@ -2227,8 +2273,8 @@ label {
     margin-bottom: 17px; }
     .services-card__image img {
       max-width: 100%;
-      -webkit-transition: 8s;
-      transition: 8s; }
+      -webkit-transition: 1s;
+      transition: 1s; }
   .services-card__title {
     padding-right: 80px;
     position: relative;
@@ -2293,11 +2339,15 @@ label {
   text-decoration: none;
   -webkit-transition: .4s;
   transition: .4s;
-  opacity: 1; }
+  opacity: 1;
+  overflow: hidden; }
   .projects-card:hover .projects-card-text {
     background: #334D00; }
   .projects-card:hover .projects-card__desc {
     color: #fff; }
+  .projects-card:hover .projects-card__image {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
   .projects-card-wrapper {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 50%;
@@ -2309,7 +2359,9 @@ label {
     height: 305px;
     background-size: cover;
     -ms-flex-negative: 0;
-    flex-shrink: 0; }
+    flex-shrink: 0;
+    -webkit-transition: 1s;
+    transition: 1s; }
   .projects-card-text {
     background: #486C00;
     padding: 13px 28px 25px;
@@ -2325,7 +2377,8 @@ label {
     justify-content: flex-end;
     height: 100%;
     -webkit-transition: .4s;
-    transition: .4s; }
+    transition: .4s;
+    z-index: 5; }
   .projects-card__name {
     font-family: "Bitter", serif;
     font-size: 32px;
@@ -2506,8 +2559,8 @@ label {
     border-bottom: 3px solid #DC3D1A; }
     .articles-card__image img {
       max-width: 100%;
-      -webkit-transition: 10s;
-      transition: 10s; }
+      -webkit-transition: 1s;
+      transition: 1s; }
   .articles-card__title {
     display: block;
     font-size: 32px;
@@ -2900,7 +2953,11 @@ label {
   position: relative;
   text-decoration: none;
   font-weight: 700;
-  margin-top: -6px; }
+  margin-top: -6px;
+  -webkit-transition: .2s;
+  transition: .2s; }
+  .list-more:hover {
+    color: #d2541f; }
   .list-more:after {
     content: '';
     width: 21px;
@@ -2940,12 +2997,6 @@ label {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
-  .content-images a {
-    -webkit-transition: .4s;
-    transition: .4s;
-    opacity: 1; }
-    .content-images a:hover {
-      opacity: 0.9; }
 
 .projects-more {
   font-size: 24px;
@@ -2967,7 +3018,11 @@ label {
   position: relative;
   text-decoration: none;
   font-weight: 700;
-  margin-bottom: 55px; }
+  margin-bottom: 55px;
+  -webkit-transition: .2s;
+  transition: .2s; }
+  .projects-more:hover {
+    color: #537b04; }
   .projects-more:after {
     content: '';
     width: 21px;
@@ -3021,3 +3076,29 @@ label {
     opacity: 0.8;
     -webkit-transition: .4s;
     transition: .4s; }
+
+.content figure {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative; }
+  .content figure a {
+    position: relative; }
+    .content figure a:after {
+      content: '';
+      position: absolute;
+      bottom: 7px;
+      right: 7px;
+      background: url("../svg/zoom.svg");
+      width: 18px;
+      height: 18px; }
+
+footer {
+  margin-top: auto; }

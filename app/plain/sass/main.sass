@@ -142,8 +142,10 @@ a
       color: #8D8D8D
     &.float-right
       margin-left: 60px
+      padding-top: 10px
     &.float-left
       margin-right: 60px
+      padding-top: 10px
   p
     color: #5E5E5E
     margin-bottom: 25px
@@ -155,10 +157,12 @@ a
   iframe
     max-width: 100% !important
     margin: 25px 0
+  p + ul,p + ol
+    margin-top: -10px
   ul
     list-style-type: none
     padding-left: 50px
-    margin: 30px 0 54px
+    margin: 10px 0 30px
     font-size: 16px
     line-height: 24px
     color: #5E5E5E
@@ -199,7 +203,7 @@ a
     
     counter-reset: a
     padding-left: 50px
-    margin: 33px 0 49px
+    margin: 10px 0 30px
     line-height: 28px
     font-size: 17px
     color: #5E5E5E
@@ -860,6 +864,8 @@ label
         border: 1px solid #000
         color: #000
         background: none
+        pointer-events: none
+        cursor: default
   &-menu
     display: flex
     justify-content: center
@@ -950,6 +956,9 @@ label
   &-item
     height: 490px
     display: flex
+    &:hover
+      .main-slider-image
+        transform: scale(1.05)
   &-left
     height: 100%
     flex: 0 0 750px
@@ -979,6 +988,7 @@ label
     flex: 0 1 820px
     margin-left: -135px
     background-size: cover
+    animation: 10s linear 0s infinite alternate zoom
   &-container
     .padding
       padding-right: 0
@@ -1028,6 +1038,11 @@ label
     transform: scale(-1,1)
 .owl-stage
   display: flex
+@keyframes zoom
+  from
+    transform: scale(1.0)
+  to
+    transform: scale(1.05)
 .main-about
   display: flex
   padding: 48px 0 70px
@@ -1097,6 +1112,8 @@ label
   &-card
     flex: 0 1 271px
     margin-right: 43px
+    &.only-xl
+      display: none
     &:hover
       .tour-examples-card__image img
         transform: scale(1.05)
@@ -1556,10 +1573,10 @@ label
       align-items: center
       margin-bottom: 10px
       padding-bottom: 3px
+      border-bottom: 2px solid #E0581E
       img
         //max-width: 100%
-        border-bottom: 2px solid #E0581E
-        transition: 4s
+        transition: 1s
     &-info
       display: flex
       justify-content: space-between
@@ -1661,6 +1678,9 @@ label
     &-item:hover
       .detail-slider-item__caption
         color: #000
+      .detail-slider-item__link
+        img
+          transform: scale(1.05)
     .owl-dots
       display: none
     .owl-nav
@@ -1702,6 +1722,7 @@ label
           background: url("../svg/zoom.svg")
         img
           max-width: 100%
+          transition: 1s
       &__caption
         font-size: 14px
         line-height: 19px
@@ -1767,6 +1788,8 @@ label
     &:hover
       .content-slider-item__caption
         color: #000
+      .content-slider-item__link img
+        transform: scale(1.05)
     &__link
       height: 167px
       display: flex
@@ -1785,6 +1808,7 @@ label
         height: 18px
       img
         max-width: 100%
+        transition: 1s
     &__caption
       font-size: 14px
       line-height: 19px
@@ -1850,6 +1874,9 @@ label
   margin-right: 22px
   img
     max-width: 100%
+  &:hover
+    img
+      transform: scale(1.05)
   &:after
     content: ''
     position: absolute
@@ -1858,6 +1885,8 @@ label
     background: url("../svg/zoom.svg")
     width: 18px
     height: 18px
+  img
+    transition: 1s
 .detail-feedback
   margin: 0 auto
   padding: 65px 15px
@@ -1918,7 +1947,7 @@ label
       border-bottom: 2px solid #E0581E
       img
         max-width: 100%
-        transition: 4s
+        transition: 1s
     &__name
       font-size: 28px
       font-weight: 700
@@ -1987,7 +2016,7 @@ label
       margin-bottom: 17px
       img
         max-width: 100%
-        transition: 8s
+        transition: 1s
     &__title
       padding-right: 80px
       position: relative
@@ -2039,11 +2068,14 @@ label
     text-decoration: none
     transition: .4s
     opacity: 1
+    overflow: hidden
     &:hover
       .projects-card-text
         background: #334D00
       .projects-card__desc
         color: #fff
+      .projects-card__image
+        transform: scale(1.05)
     &-wrapper
       flex: 0 1 50%
       max-width: 50%
@@ -2053,6 +2085,7 @@ label
       height: 305px
       background-size: cover
       flex-shrink: 0
+      transition: 1s
     &-text
       background: #486C00
       padding: 13px 28px 25px
@@ -2061,6 +2094,7 @@ label
       justify-content: flex-end
       height: 100%
       transition: .4s
+      z-index: 5
     &__name
       font-family: "Bitter", serif
       font-size: 32px
@@ -2209,8 +2243,7 @@ label
       border-bottom: 3px solid #DC3D1A
       img
         max-width: 100%
-        transition: 10s
-
+        transition: 1s
     &__title
       display: block
       font-size: 32px
@@ -2543,6 +2576,9 @@ label
   text-decoration: none
   font-weight: 700
   margin-top: -6px
+  transition: .2s
+  &:hover
+    color: #d2541f
   &:after
     content: ''
     width: 21px
@@ -2576,11 +2612,6 @@ label
 .content-images
   display: flex
   flex-wrap: wrap
-  a
-    transition: .4s
-    opacity: 1
-    &:hover
-      opacity: 0.9
 .projects-more
   font-size: 24px
   line-height: 28px
@@ -2594,6 +2625,9 @@ label
   text-decoration: none
   font-weight: 700
   margin-bottom: 55px
+  transition: .2s
+  &:hover
+    color: #537b04
   &:after
     content: ''
     width: 21px
@@ -2648,3 +2682,20 @@ label
   &:hover
     opacity: 0.8
     transition: .4s
+.content figure
+  display: inline-flex
+  flex-direction: column
+  align-items: center
+  position: relative
+  a
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      bottom: 7px
+      right: 7px
+      background: url("../svg/zoom.svg")
+      width: 18px
+      height: 18px
+footer
+  margin-top: auto

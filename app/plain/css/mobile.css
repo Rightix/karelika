@@ -79,6 +79,12 @@
         text-overflow: ellipsis;
         color: #fff;
         border-bottom: 1px solid #7AAD16; }
+        .header-menu__item.current {
+          background: #588402;
+          color: #fff; }
+        .header-menu__item:hover {
+          color: #fff;
+          background: #588402; }
         .header-menu__item:before {
           content: none; }
         .header-menu__item:last-of-type {
@@ -169,7 +175,8 @@
       padding: 23px 15px 70px;
       -webkit-box-pack: start;
       -ms-flex-pack: start;
-      justify-content: flex-start; }
+      justify-content: flex-start;
+      background: #83AC4E; }
       .main-slider-left__title {
         font-size: 31px;
         line-height: 35px;
@@ -325,7 +332,17 @@
       background: -webkit-gradient(linear, left top, left bottom, from(#ADCC80), to(#88B448));
       background: linear-gradient(180deg, #ADCC80 0%, #88B448 100%); }
   .review-caption {
-    padding-right: 64px; }
+    padding-right: 64px;
+    margin-top: 17px;
+    margin-left: auto; }
+    .review-caption span {
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 4px; }
+    .review-caption__name {
+      font-size: 18px !important;
+      line-height: 22px !important;
+      margin-bottom: 4px; }
   .review-slider {
     margin-right: -15px; }
     .review-slider .owl-dots {
@@ -342,7 +359,11 @@
     padding: 40px 15px 90px 34px;
     border-radius: 20px 0 0 20px; }
     .review-block:before {
-      right: 0; }
+      right: 15px;
+      width: 32px;
+      height: 55px;
+      bottom: -55px;
+      background: url("../svg/review_rec_mobile.svg"); }
     .review-block:after {
       content: none; }
     .review-block__more {
@@ -606,14 +627,15 @@
     margin: 0 -15px 0;
     padding-bottom: 30px;
     border-bottom: 1px solid #C4C4C4;
-    position: relative; }
+    position: relative;
+    text-align: center; }
     .content-images a {
       margin: 0;
       margin-right: 0;
       -webkit-box-align: end;
       -ms-flex-align: end;
       align-items: flex-end;
-      width: 100% !important;
+      width: auto !important;
       height: 260px; }
     .content-images .owl-dots {
       top: 220px; }
@@ -925,7 +947,7 @@
     font-size: 18px;
     line-height: 26px; }
   .requisites {
-    padding: 40px 0 50px;
+    padding: 40px 0 45px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -942,6 +964,8 @@
       -ms-flex: 0 1 auto;
       flex: 0 1 auto;
       margin: 0 0 20px; }
+      .requisites-item:last-child {
+        margin-bottom: 0; }
   .other-articles__title {
     font-size: 22px;
     line-height: 28px;
@@ -1011,6 +1035,8 @@
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     text-align: left; }
+    .error-page br {
+      display: none; }
     .error-page__title {
       font-size: 31px;
       line-height: 35px;
@@ -1035,15 +1061,205 @@
     .error-page-wrapper .burger-button {
       display: none; } }
 
-@media (min-width: 700px) and (max-width: 1120px) {
+@media (min-width: 726px) and (max-width: 1120px) {
   .projects-card__image {
     height: 305px; }
   .articles-card__image {
     height: 305px;
     z-index: 5; }
+  .tours-card__image {
+    margin: 0 0 10px; }
   .tours-card-wrapper {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
+    max-width: 335px;
+    margin: 0 auto 60px; }
+  .header-callback {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-bottom: 0;
+    margin-top: 3px;
+    min-height: 58px; }
+  .header-menu {
+    max-width: 420px;
+    margin: 0 auto; }
+  .burger-button.active {
+    background: #C4C4C4; }
+    .burger-button.active:after {
+      width: 34px;
+      height: 34px;
+      background: url("../svg/cansel.svg"); }
+  .col-12, .col-10, .col-lg-10, .col-lg-11 {
+    padding-left: 45px;
+    padding-right: 45px; }
+  .col-12.padding, .padding {
+    padding-left: 45px;
+    padding-right: 45px; }
+  .main-slider {
+    margin: 0 -45px; }
+  .main-slider-left {
+    padding: 23px 45px 80px; }
+    .main-slider-left__title {
+      font-size: 38px;
+      line-height: 44px;
+      margin-bottom: 15px; }
+    .main-slider-left__desc {
+      font-size: 19px;
+      line-height: 27px; }
+  .tour-examples-card {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 271px;
+    flex: 0 0 271px; }
+  .border-button {
+    font-size: 19px; }
+  .review-block-text {
+    font-size: 19px;
+    line-height: 28px; }
+  .review-slider {
+    margin-right: -45px; }
+  .main-reviews {
+    padding: 200px 0 166px; }
+    .main-reviews:before {
+      background: url("../svg/main_reviews_tablet.svg"); }
+  .company-reviews .main-reviews:before {
+    background: url("../svg/company_reviews_tablet.svg"); }
+  .review-block {
+    padding: 50px 45px 90px 45px; }
+    .review-block__more {
+      left: 45px;
+      font-weight: 700; }
+  .main-reviews-wrapper {
+    background: url(../../img/greenbg.png);
+    background-position: center; }
+  .footer {
+    display: block; }
+    .footer.mobile {
+      display: none; }
+    .footer-top {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+    .footer__copyright {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 308px;
+      flex: 0 1 308px;
+      max-width: 308px; }
+    .footer-interso {
+      bottom: 42px;
+      right: 0;
+      max-width: 190px;
+      position: absolute;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end; }
+      .footer-interso__copyright {
+        margin-right: 0;
+        margin-bottom: 16px;
+        text-align: right; }
+    .footer-phones {
+      margin-bottom: 0; }
+  .detail-slider {
+    margin: 0 -45px 45px; }
+  .content-slider {
+    margin: 0 -45px 34px; }
+  .content-images {
+    margin: 0 -45px; }
+  .detail-price {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+    .detail-price__title {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 210px;
+      flex: 0 0 210px;
+      margin-right: 15px;
+      margin-bottom: 0; }
+  .over-tours {
+    margin: 0 -45px; }
+    .over-tours-item {
+      padding: 0; }
+      .over-tours-item__image {
+        margin: 0 0 17px; }
+  .services-list {
+    padding: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .services-card {
     max-width: 380px;
-    margin: 0 auto 60px; } }
+    margin: 0 auto; }
+    .services-card-wrapper {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+      flex: 0 1 50%;
+      max-width: 50%;
+      padding: 0 15px; }
+    .services-card__image {
+      margin: 0 0 17px; }
+  .services-body.content figure {
+    max-width: 305px; }
+    .services-body.content figure.float-right {
+      margin-left: 30px;
+      float: right; }
+  .projects-card__image {
+    height: 160px; }
+  .projects-card-wrapper {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    max-width: 50%;
+    padding: 0 15px; }
+  .project-head-item {
+    margin: 0 -45px; }
+  .project-head-left {
+    padding: 25px 45px 60px; }
+    .project-head-left__title {
+      font-size: 38px;
+      line-height: 44px;
+      margin-bottom: 14px; }
+    .project-head-left__desc {
+      font-size: 19px;
+      line-height: 27px; }
+  .project-detail .detail-slider {
+    margin: 0 -45px 45px; }
+  .content ol, .content ul {
+    padding-left: 56px; }
+  .articles-card:before {
+    content: none; }
+  .articles-card__image {
+    margin: 0 0 15px;
+    height: auto; }
+  .articles-card-wrapper {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    max-width: 50%; }
+  .static-other-articles .articles-card-wrapper {
+    display: block; }
+  .content figure.company-image {
+    margin: 0 auto 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .company-about {
+    padding-bottom: 20px; }
+  .company-numbers {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .company-numbers-item {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+      flex: 0 1 50%;
+      max-width: 50%; } }

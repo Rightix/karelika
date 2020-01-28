@@ -63,6 +63,12 @@
         text-overflow: ellipsis
         color: #fff
         border-bottom: 1px solid #7AAD16
+        &.current
+          background: #588402
+          color: #fff
+        &:hover
+          color: #fff
+          background: #588402
         &:before
           content: none
         &:last-of-type
@@ -140,6 +146,7 @@
       padding: 23px 15px 70px
       //min-height: 345px
       justify-content: flex-start
+      background: #83AC4E
       &__title
         font-size: 31px
         line-height: 35px
@@ -266,6 +273,16 @@
   .review
     &-caption
       padding-right: 64px
+      margin-top: 17px
+      margin-left: auto
+      span
+        font-size: 16px
+        line-height: 18px
+        margin-bottom: 4px
+      &__name
+        font-size: 18px!important
+        line-height: 22px!important
+        margin-bottom: 4px
     &-slider
       margin-right: -15px
       .owl-dots
@@ -278,7 +295,11 @@
       padding: 40px 15px 90px 34px
       border-radius: 20px 0 0 20px
       &:before
-        right: 0
+        right: 15px
+        width: 32px
+        height: 55px
+        bottom: -55px
+        background: url("../svg/review_rec_mobile.svg")
       &:after
         content: none
       &__more
@@ -491,11 +512,12 @@
     padding-bottom: 30px
     border-bottom: 1px solid #C4C4C4
     position: relative
+    text-align: center
     a
       margin: 0
       margin-right: 0
       align-items: flex-end
-      width: 100%!important
+      width: auto!important
       height: 260px
     img
     .owl-dots
@@ -766,7 +788,7 @@
     font-size: 18px
     line-height: 26px
   .requisites
-    padding: 40px 0 50px
+    padding: 40px 0 45px
     flex-direction: column
     &__title
       font-size: 28px
@@ -776,6 +798,8 @@
     &-item
       flex: 0 1 auto
       margin: 0 0 20px
+      &:last-child
+        margin-bottom: 0
   .other-articles__title
     font-size: 22px
     line-height: 28px
@@ -834,6 +858,8 @@
     padding: 0 15px
     flex: 0 1 auto
     text-align: left
+    br
+      display: none
     &__title
       font-size: 31px
       line-height: 35px
@@ -860,7 +886,7 @@
             max-width: none
       .burger-button
         display: none
-@media (min-width: 700px) and (max-width: 1120px)
+@media (min-width: 726px) and (max-width: 1120px)
   .projects
     &-card
       &-wrapper
@@ -872,7 +898,174 @@
         height: 305px
         z-index: 5
   .tours-card
+    &__image
+      margin: 0 0 10px
     &-wrapper
       flex: 0 1 50%
-      max-width: 380px
+      max-width: 335px
       margin: 0 auto 60px
+  .header-callback
+    display: inline-flex
+    margin-bottom: 0
+    margin-top: 3px
+    min-height: 58px
+  .header-menu
+    max-width: 420px
+    margin: 0 auto
+  .burger-button.active
+    background: #C4C4C4
+    &:after
+      width: 34px
+      height: 34px
+      background: url("../svg/cansel.svg")
+  .col-12,.col-10,.col-lg-10,.col-lg-11
+    padding-left: 45px
+    padding-right: 45px
+  .col-12.padding, .padding
+    padding-left: 45px
+    padding-right: 45px
+  .main-slider
+    margin: 0 -45px
+  .main-slider-left
+    padding: 23px 45px 80px
+    &__title
+      font-size: 38px
+      line-height: 44px
+      margin-bottom: 15px
+    &__desc
+      font-size: 19px
+      line-height: 27px
+  .tour-examples-card
+    flex: 0 0 271px
+  .border-button
+    font-size: 19px
+  .review-block-text
+    font-size: 19px
+    line-height: 28px
+  .review-slider
+    margin-right: -45px
+  .main-reviews
+    padding: 200px 0 166px
+    &:before
+      background: url("../svg/main_reviews_tablet.svg")
+  .company-reviews .main-reviews:before
+    background: url("../svg/company_reviews_tablet.svg")
+  .review
+    &-block
+      padding: 50px 45px 90px 45px
+      &__more
+        left: 45px
+        font-weight: 700
+  .main-reviews-wrapper
+    background: url(../../img/greenbg.png)
+    background-position: center
+  .footer
+    display: block
+    &.mobile
+      display: none
+    &-top
+      flex-direction: row
+    &__copyright
+      flex: 0 1 308px
+      max-width: 308px
+    &-interso
+      bottom: 42px
+      right: 0
+      max-width: 190px
+      position: absolute
+      flex-direction: column
+      align-items: flex-end
+      &__copyright
+        margin-right: 0
+        margin-bottom: 16px
+        text-align: right
+    &-phones
+      margin-bottom: 0
+  .detail-slider
+    margin: 0 -45px 45px
+  .content-slider
+    margin: 0 -45px 34px
+  .content-images
+    margin: 0 -45px
+  .detail
+    &-price
+      flex-direction: row
+      &__title
+        flex: 0 0 210px
+        margin-right: 15px
+        margin-bottom: 0
+      &-list
+  .over-tours
+    margin: 0 -45px
+    &-item
+      padding: 0
+      &__image
+        margin: 0 0 17px
+  .services-list
+    padding: 0
+    justify-content: space-between
+  .services-card
+    max-width: 380px
+    margin: 0 auto
+    &-wrapper
+      flex: 0 1 50%
+      max-width: 50%
+      padding: 0 15px
+    &__image
+      margin: 0 0 17px
+  .services
+    &-body.content
+      figure
+        max-width: 305px
+        &.float-right
+          margin-left: 30px
+          float: right
+  .projects
+    &-card
+      &__image
+        height: 160px
+      &-wrapper
+        flex: 0 1 50%
+        max-width: 50%
+        padding: 0 15px
+  .project-head
+    &-item
+      margin: 0 -45px
+    &-left
+      padding: 25px 45px 60px
+      &__title
+        font-size: 38px
+        line-height: 44px
+        margin-bottom: 14px
+      &__desc
+        font-size: 19px
+        line-height: 27px
+  .project-detail
+    .detail-slider
+      margin: 0 -45px 45px
+  .content ol, .content ul
+    padding-left: 56px
+  .articles
+    &-card
+      &:before
+        content: none
+      &__image
+        margin: 0 0 15px
+        height: auto
+      &-wrapper
+        flex: 0 1 50%
+        max-width: 50%
+  .static-other-articles .articles-card-wrapper
+    display: block
+  .content figure.company-image
+    margin: 0 auto 30px
+    display: flex
+  .company
+    &-about
+      padding-bottom: 20px
+    &-numbers
+      flex-direction: row
+      flex-wrap: wrap
+      &-item
+        flex: 0 1 50%
+        max-width: 50%
